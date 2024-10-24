@@ -1,0 +1,604 @@
+<!doctype html>
+<!--Quite a few clients strip your Doctype out, and some even apply their own. Many clients do honor your doctype and it can make things much easier if you can validate constantly against a Doctype.-->
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gas Simulator</title>
+
+<!-- Please use an inliner tool to convert all CSS to inline as inpage or external CSS is removed by email clients -->
+<!-- important in CSS is used to prevent the styles of currently inline CSS from overriding the ones mentioned in media queries when corresponding screen sizes are encountered -->
+
+<style type="text/css">
+body {
+	margin: 0;
+}
+body, table, td, p, a, li, blockquote {
+	-webkit-text-size-adjust: none!important;
+	font-family: sans-serif;
+	font-style: normal;
+	font-weight: 400;
+}
+button {
+	width: 90%;
+}
+
+@media screen and (max-width:600px) {
+/*styling for objects with screen size less than 600px; */
+body, table, td, p, a, li, blockquote {
+	-webkit-text-size-adjust: none!important;
+	font-family: sans-serif;
+}
+table {
+	/* All tables are 100% width */
+	width: 100%;
+}
+.footer {
+	/* Footer has 2 columns each of 48% width */
+	height: auto !important;
+	max-width: 48% !important;
+	width: 48% !important;
+}
+table.responsiveImage {
+	/* Container for images in catalog */
+	height: auto !important;
+	max-width: 30% !important;
+	width: 30% !important;
+}
+table.responsiveContent {
+	/* Content that accompanies the content in the catalog */
+	height: auto !important;
+	max-width: 66% !important;
+	width: 66% !important;
+}
+.top {
+	/* Each Columnar table in the header */
+	height: auto !important;
+	max-width: 48% !important;
+	width: 48% !important;
+}
+.catalog {
+	margin-left: 0%!important;
+}
+}
+
+@media screen and (max-width:480px) {
+/*styling for objects with screen size less than 480px; */
+body, table, td, p, a, li, blockquote {
+	-webkit-text-size-adjust: none!important;
+	font-family: sans-serif;
+}
+table {
+	/* All tables are 100% width */
+	width: 100% !important;
+	border-style: none !important;
+}
+.footer {
+	/* Each footer column in this case should occupy 96% width  and 4% is allowed for email client padding*/
+	height: auto !important;
+	max-width: 96% !important;
+	width: 96% !important;
+}
+.table.responsiveImage {
+	/* Container for each image now specifying full width */
+	height: auto !important;
+	max-width: 96% !important;
+	width: 96% !important;
+}
+.table.responsiveContent {
+	/* Content in catalog  occupying full width of cell */
+	height: auto !important;
+	max-width: 96% !important;
+	width: 96% !important;
+}
+.top {
+	/* Header columns occupying full width */
+	height: auto !important;
+	max-width: 100% !important;
+	width: 100% !important;
+}
+.catalog {
+	margin-left: 0%!important;
+}
+button {
+	width: 90%!important;
+}
+}
+</style>
+</head>
+<body yahoo="yahoo">
+
+<table width="100%"  cellspacing="0" cellpadding="0">
+  <tbody>
+    <tr>
+      <td><table width="600"  align="center" cellpadding="0" cellspacing="0">
+          <!-- Main Wrapper Table with initial width set to 60opx -->
+          <tbody>
+            <tr>
+              <td><table bgcolor="#d0cfcf" class="top" width="48%"  align="left" cellpadding="0" cellspacing="0" style="padding:10px 10px 10px 10px;">
+                  <!-- First header column with Logo -->
+                  <tbody>
+                    <tr>
+						
+                      <td style="text-align: center;"><a href="home.html" style="text-decoration:none; font-size: 12px; color:#929292; text-align: center; font-family: sans-serif;">Home!</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table bgcolor="#d0cfcf" class="top" width="48%"  align="left" cellpadding="0" cellspacing="0" style="padding:10px 10px 10px 10px; text-align:left">
+                  <!-- Second header column with ISSUE|DATE -->
+                  <tbody>
+                    <tr>
+                      <td style="text-align: center;"><a href="about.html" style="text-decoration:none; font-size: 12px; color:#929292; text-align: left; font-family: sans-serif;">About</a></td>
+                    </tr>
+                  </tbody>
+                </table></td>
+            </tr>
+            <tr> 
+              <!-- HTML Spacer row -->
+              <td style="font-size: 0; line-height: 0;" height="20"><table width="96%" align="left"  cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td style="font-size: 0; line-height: 0;" height="20">&nbsp;</td>
+                  </tr>
+                </table></td>
+            </tr>
+            <tr> 
+              <!-- HTML IMAGE SPACER -->
+              <td style="font-size: 0; line-height: 0;" height="20"><table align="left"  cellpadding="0" cellspacing="0" >
+                  <tr>
+                    <td >&nbsp;</td>
+                  </tr>
+                </table></td>
+            </tr>
+            <tr> 
+              <!-- Introduction area -->
+              <td><table width="96%"  align="left" cellpadding="0" cellspacing="0">
+                  <tr> 
+                    <!-- row container for TITLE/EMAIL THEME -->
+                    <td align="Left" style="font-size: 29px; font-weight: 300; line-height: 2.5em; color: #929292; font-family: sans-serif;"><strong>Gas Simulator</strong></td>
+                  </tr>
+                  <tr> 
+                    <!-- row container for Tagline -->
+                    <td align="Left" style="font-size: 16px; font-weight:1000; color: #929292; font-family: sans-serif;">&nbsp;Date: June 16, 2022 → June 18, 2022 </td>
+                  </tr>
+				  <tr> 
+                    <!-- row container for Tagline -->
+                    <td align="Left" style="font-size: 16px; font-weight:1000; color: #929292; font-family: sans-serif;">&nbsp;Type: Machine Learning and Computer Science </td>
+                  </tr>
+                  <tr>
+                    <td style="font-size: 0; line-height: 0;" height="20"><table width="96%" align="left"  cellpadding="0" cellspacing="0">
+                        <tr> 
+                          <!-- HTML Spacer row -->
+                          <td style="font-size: 0; line-height: 0;" height="20">&nbsp;</td>
+                        </tr>
+                      </table></td>
+                  </tr>
+                  <tr> 
+                    <!-- Row container for Intro/ Description -->
+                    <td align="left" style="font-size: 14px; font-style: normal; font-weight: 100; color: #929292; line-height: 1.8; text-align:justify; padding:10px 20px 0px 20px; font-family: sans-serif;"></td>
+                  </tr>
+                </table></td>
+            </tr>
+	
+			   <tr> 
+                    <!-- row container for Tagline -->
+                    <td align="Left" style="padding:20px 0px 0px 5px; font-size: 16px; font-weight:1000; color: #929292; font-family: sans-serif;"><strong>Basic Explanation&nbsp;&nbsp;</strong></td>
+            </tr>
+            <tr> 
+              <!-- HTML Spacer row -->
+              <td style="font-size: 16; line-height: 1.6;" height="10"><table width="96%" align="left"  cellpadding="0" cellspacing="0">
+                  <tr>
+                   		<td align="Left" style="padding:20px 0px 0px 5px; font-size: 16px; font-weight:1000; color: #929292; font-family: sans-serif;">
+
+<p>Pressure comes from many many fast moving tiny gas molecules colliding against the many surfaces all around us. The particles can collide with each other causing some unique results based on the environment. All of this can be demonstrated by simulating thousands of little particles at once. Below is a working model I programmed of pressure filling a closed container. Each dot represents a single molecule.</p>   
+
+</td>
+                  </tr>
+				  <tr> 
+                    <!-- row container for Tagline -->
+                    <td align="Left" style="padding:20px 0px 0px 5px; font-size: 16px; font-weight:1000; color: #929292; font-family: sans-serif;"><strong>Web Version: &nbsp;&nbsp;</strong></td>
+            
+				  </tr>
+				  <tr>
+				  
+					  <td><canvas style="border: solid 4px black" id="main" width="1000" height="500"></canvas></td>
+				  
+				  </tr>
+				  <tr>
+				  
+				  	<td><button style="padding: 10px; background-color: #7FCD58; font-size: 18px;" onClick="start()"><strong>Start!</strong></button></td>
+					  
+				  
+				  </tr>
+				  <tr>
+				  
+				  	<td><button style="padding: 10px; background-color: #E27171; font-size: 18px;" onClick="stop()"><strong>Stop!</strong></button></td>
+				  
+				  </tr>
+				  
+				  
+				   
+				 
+			  
+			  
+				  
+				
+                </table></td>
+            </tr>
+			  
+			  
+			
+			  </tr>
+			  
+			  
+			  
+			 
+			 
+			  
+			  
+			 
+<!-- SPLIT -->
+	  
+	  		
+	  <!-- SPLIT -->
+	  
+	  	
+  </tbody>
+</table>
+
+	<script type="text/javascript">
+		
+		var canvas;
+var ctx;
+
+var cringe;
+
+var particles = [];
+
+var viscosity = 0.01;
+
+//EnviromentalFactors
+
+
+
+function start() {
+
+    canvas = document.getElementById("main");
+    ctx = canvas.getContext("2d");
+    
+
+    for (let i = 0; i < 0; i++) {
+
+        particles.push(new particle(10, 0.5, Math.random() * 1000, Math.random() * 500, Math.random() * 200 - 100, Math.random() * 200 - 100, i));
+
+
+    }
+
+    cringe = setInterval(run, 50);
+
+
+}
+
+function stop() {
+
+    clearInterval(cringe);
+
+
+}
+
+function particle(mass, radius, x, y, velocity_x, velocity_y, id) {
+
+    this.m = mass;
+    this.r = radius;
+
+    this.x = x;
+    this.y = y;
+
+    this.vx = velocity_x;
+    this.vy = velocity_y;
+
+    this.id = id;
+    this.timeout = 0;
+    
+
+
+    this.TESTRENDER = function() {
+
+        ctx.beginPath();
+        ctx.moveTo(this.x + this.r, this.y);
+        ctx.arc(this.x, this.y, this.r, 0, 2 * Math.PI);
+        ctx.stroke();
+
+    }
+
+
+
+}
+
+function pixel(x, y) {
+
+    this.x = x;
+    this.y = y;
+    this.angle = 0;
+    this.velocity = 0;
+
+    this.count = 0;
+
+
+}
+
+var time = 0;
+
+function run() {
+
+    time++;
+    ctx.clearRect(-1000, -1000, 2000, 2000);
+
+
+    //==============
+
+    if (time < 200) {
+        if (time % 2 === 0) {
+
+
+            for (let i = 0; i < 10; i++) {
+
+                let angle1 = (Math.random() * (Math.PI / 8)) - (Math.PI / 16);
+                particles.push(new particle(10, 0.5, 0, 250 + i, 500 * Math.cos(angle1), 500 * Math.sin(angle1), 0));
+
+            }
+            
+            
+
+
+        }
+        
+
+    }
+   
+
+    //==============
+
+    for (let i = 0; i < particles.length; i++) {
+
+        
+        particles[i].timeout -= 1;
+
+        particles[i].timeout = Math.max(particles[i].timeout, 0);
+
+
+        //Wall Force
+
+        if ((particles[i].x <= 1000 && particles[i].x >= 0) !== true) {
+
+            particles[i].vx *= -1;
+            
+
+        }
+        if ((particles[i].y <= 500 && particles[i].y >= 0) !== true) {
+
+            particles[i].vy *= -1;
+            
+
+        }
+        
+        let wX = 100;
+        let wY = 200;
+
+        let wW = 20;
+        let wH = 100;
+
+        let collision = false;
+        if ((particles[i].x > wX && particles[i].x < wX + wW) && (particles[i].y > wY && particles[i].y < wY + wH)) {
+
+
+            collision = true;
+
+
+        }
+
+
+
+        //subwall 
+
+
+
+
+
+        
+        particles[i].x = Math.max(0, Math.min(1000, particles[i].x));
+        particles[i].y = Math.max(0, Math.min(500, particles[i].y));
+
+        //particles[i].vy += 980 * 0.01;
+
+        //Individual Particle Force
+
+        for (let j = 0; j < particles.length; j++) {
+
+
+
+    
+            let distance = Math.sqrt(Math.pow((particles[j].x + particles[j].vx * 0.01) - (particles[i].x + particles[i].vx * 0.01), 2) + Math.pow((particles[j].y + particles[j].vy * 0.01) - (particles[i].y + particles[i].vy * 0.01), 2));
+            let distance2 = Math.sqrt(Math.pow(particles[j].x - particles[i].x, 2) + Math.pow(particles[j].y - particles[i].y, 2));
+
+            let angle = Math.atan((particles[j].y - particles[i].y) /(particles[j].x - particles[i].x))
+
+            if (distance2 < particles[i].r + particles[j].r && i !== j) {
+
+                
+                particles[i].vx -= ((Math.cos(angle) * (distance2 / (particles[i].r + particles[j].r)) * 1000)/particles[i].m) * 0.01;
+                particles[i].vy -= ((Math.sin(angle) * (distance2 / (particles[i].r + particles[j].r)) * 1000)/particles[i].m) * 0.01;
+
+                particles[j].vx -= ((Math.cos(angle) * (distance2 / (particles[i].r + particles[j].r)) * 1000)/particles[i].m) * 0.01;
+                particles[j].vy -= ((Math.sin(angle) * (distance2 / (particles[i].r + particles[j].r)) * 1000)/particles[i].m) * 0.01;
+
+            }
+
+            
+            
+
+            if (distance2 >= particles[i].r + particles[j].r && distance < particles[i].r + particles[j].r && i !== j && particles[i].timeout === 0 && particles[j].timeout === 0) {
+               
+               
+
+               
+
+                let norm_1 = Math.pow(particles[i].x - particles[j].x, 2) + Math.pow(particles[i].y - particles[j].y, 2);
+                let norm_2 = Math.pow(particles[j].x - particles[i].x, 2) + Math.pow(particles[j].y - particles[i].y, 2);
+
+
+                let Term1_1 = (2 * particles[j].m) / (particles[i].m + particles[j].m);
+                let Term1_2 = (2 * particles[i].m) / (particles[i].m + particles[j].m);
+
+
+                let vec1x_1 = particles[i].vx - particles[j].vx;
+                let vec1y_1 = particles[i].vy - particles[j].vy;
+
+                let vec1x_2 = particles[j].vx - particles[i].vx;
+                let vec1y_2 = particles[j].vy - particles[i].vy;
+
+                let vec2x_1 = particles[i].x - particles[j].x;
+                let vec2y_1 = particles[i].y - particles[j].y;
+
+                let vec2x_2 = particles[j].x - particles[i].x;
+                let vec2y_2 = particles[j].y - particles[i].y;
+
+                let dot_1 = vec1x_1 * vec2x_1 + vec1y_1 * vec2y_1;
+                let dot_2 = vec1x_2 * vec2x_2 + vec1y_2 * vec2y_2;
+
+
+                let Term2_1 = dot_1 / norm_1;
+                let Term2_2 = dot_2 / norm_2;
+
+                let scalar_1 = Term1_1 * Term2_1;
+                let scalar_2 = Term1_2 * Term2_2;
+
+
+                let newVx_1 = scalar_1 * (particles[i].x - particles[j].x);
+                let newVy_1 = scalar_1 * (particles[i].y - particles[j].y);
+
+                let newVx_2 = scalar_2 * (particles[j].x - particles[i].x);
+                let newVy_2 = scalar_2 * (particles[j].y - particles[i].y);
+
+
+                particles[i].vx -= newVx_1;
+                particles[i].vy -= newVy_1;
+
+                particles[j].vx -= newVx_2;
+                particles[j].vy -= newVy_2;
+
+                
+               
+                
+                
+
+            }
+
+            /*
+            if (distance2 >= particles[i].r + particles[j].r && i !== j) {
+
+                let gF = viscosity * (particles[i].m * particles[i].m) / (Math.pow(distance2, 2));
+
+                particles[i].vx -= Math.cos(angle) * gF * 0.01;
+                particles[i].vy -= Math.sin(angle) * gF * 0.01;
+
+            }
+            */
+            
+            
+            
+
+        }
+
+        
+
+        //console.log(particles);
+       
+
+        particles[i].x += particles[i].vx * 0.01;
+        particles[i].y += particles[i].vy * 0.01;
+
+        
+        
+
+
+
+        
+        particles[i].TESTRENDER();
+   
+
+
+    }
+
+    let pixels = [];
+
+        for (let x = 0; x < 50; x++) {
+
+            let col = [];
+            for (let y = 0; y < 25; y++) {
+
+
+                col.push(new pixel(x,y));
+
+
+            }
+            pixels.push(col);
+
+        }
+
+        //console.log(pixels);
+        let greatestCount = 0;
+        let greatestVelocity = 0;
+        let greatestAngle = 0;
+        for (let j = 0; j < particles.length; j++) {
+
+
+            let x = Math.floor(particles[j].x / 20);
+            let y = Math.floor(particles[j].y / 20);
+
+            if (x > 49 || y > 24 || x < 0 || y < 0) {
+
+                continue;
+
+            }
+            if (Number.isNaN(particles[j].vx) || Number.isNaN(particles[j].vy)) {
+
+                continue;
+
+            }
+
+            pixels[x][y].velocity += Math.sqrt(Math.pow(particles[j].vx, 2) + Math.pow(particles[j].vy, 2));
+            pixels[x][y].angle += Math.abs(Math.atan(Math.atan(particles[j].vy/particles[j].vx)));
+
+            pixels[x][y].count++;
+            greatestCount = Math.max(pixels[x][y].count, greatestCount);
+            greatestVelocity = Math.max(pixels[x][y].velocity, greatestVelocity);
+            greatestAngle = Math.max(pixels[x][y].angle, greatestAngle);
+
+
+        }
+        /*
+        for (let x = 0; x < 50; x++) {
+
+            for (let y = 0; y < 25; y++) {
+
+                let brightness = pixels[x][y].count / greatestCount;
+
+                ctx.fillStyle = "rgb(" + Math.floor((255 * (pixels[x][y].velocity / (greatestVelocity)))) + "," + Math.floor(brightness * (255)) + "," + 0 + ")";
+                ctx.fillRect(x * 20, y * 20, 20, 20);
+
+
+            }
+
+        }*/
+
+}
+		
+		
+	</script>
+
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,1261 @@
+<!doctype html>
+<!--Quite a few clients strip your Doctype out, and some even apply their own. Many clients do honor your doctype and it can make things much easier if you can validate constantly against a Doctype.-->
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Creating New words using Machine Learning | Alex For Your College</title>
+
+<!-- Please use an inliner tool to convert all CSS to inline as inpage or external CSS is removed by email clients -->
+<!-- important in CSS is used to prevent the styles of currently inline CSS from overriding the ones mentioned in media queries when corresponding screen sizes are encountered -->
+
+<style type="text/css">
+body {
+	margin: 0;
+}
+body, table, td, p, a, li, blockquote {
+	-webkit-text-size-adjust: none!important;
+	font-family: sans-serif;
+	font-style: normal;
+	font-weight: 400;
+}
+button {
+	width: 90%;
+}
+
+@media screen and (max-width:600px) {
+/*styling for objects with screen size less than 600px; */
+body, table, td, p, a, li, blockquote {
+	-webkit-text-size-adjust: none!important;
+	font-family: sans-serif;
+}
+table {
+	/* All tables are 100% width */
+	width: 100%;
+}
+.footer {
+	/* Footer has 2 columns each of 48% width */
+	height: auto !important;
+	max-width: 48% !important;
+	width: 48% !important;
+}
+table.responsiveImage {
+	/* Container for images in catalog */
+	height: auto !important;
+	max-width: 30% !important;
+	width: 30% !important;
+}
+table.responsiveContent {
+	/* Content that accompanies the content in the catalog */
+	height: auto !important;
+	max-width: 66% !important;
+	width: 66% !important;
+}
+.top {
+	/* Each Columnar table in the header */
+	height: auto !important;
+	max-width: 48% !important;
+	width: 48% !important;
+}
+.catalog {
+	margin-left: 0%!important;
+}
+}
+
+@media screen and (max-width:480px) {
+/*styling for objects with screen size less than 480px; */
+body, table, td, p, a, li, blockquote {
+	-webkit-text-size-adjust: none!important;
+	font-family: sans-serif;
+}
+table {
+	/* All tables are 100% width */
+	width: 100% !important;
+	border-style: none !important;
+}
+.footer {
+	/* Each footer column in this case should occupy 96% width  and 4% is allowed for email client padding*/
+	height: auto !important;
+	max-width: 96% !important;
+	width: 96% !important;
+}
+.table.responsiveImage {
+	/* Container for each image now specifying full width */
+	height: auto !important;
+	max-width: 96% !important;
+	width: 96% !important;
+}
+.table.responsiveContent {
+	/* Content in catalog  occupying full width of cell */
+	height: auto !important;
+	max-width: 96% !important;
+	width: 96% !important;
+}
+.top {
+	/* Header columns occupying full width */
+	height: auto !important;
+	max-width: 100% !important;
+	width: 100% !important;
+}
+.catalog {
+	margin-left: 0%!important;
+}
+button {
+	width: 90%!important;
+}
+}
+</style>
+</head>
+<body yahoo="yahoo">
+
+<table width="100%"  cellspacing="0" cellpadding="0">
+  <tbody>
+    <tr>
+      <td><table width="600"  align="center" cellpadding="0" cellspacing="0">
+          <!-- Main Wrapper Table with initial width set to 60opx -->
+          <tbody>
+            <tr>
+              <td><table bgcolor="#d0cfcf" class="top" width="48%"  align="left" cellpadding="0" cellspacing="0" style="padding:10px 10px 10px 10px;">
+                  <!-- First header column with Logo -->
+                  <tbody>
+                    <tr>
+						
+                      <td style="text-align: center;"><a href="home.html" style="text-decoration:none; font-size: 12px; color:#929292; text-align: center; font-family: sans-serif;">Home!</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table bgcolor="#d0cfcf" class="top" width="48%"  align="left" cellpadding="0" cellspacing="0" style="padding:10px 10px 10px 10px; text-align:left">
+                  <!-- Second header column with ISSUE|DATE -->
+                  <tbody>
+                    <tr>
+                      <td style="text-align: center;"><a href="about.html" style="text-decoration:none; font-size: 12px; color:#929292; text-align: left; font-family: sans-serif;">About</a></td>
+                    </tr>
+                  </tbody>
+                </table></td>
+            </tr>
+            <tr> 
+              <!-- HTML Spacer row -->
+              <td style="font-size: 0; line-height: 0;" height="20"><table width="96%" align="left"  cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td style="font-size: 0; line-height: 0;" height="20">&nbsp;</td>
+                  </tr>
+                </table></td>
+            </tr>
+            <tr> 
+              <!-- HTML IMAGE SPACER -->
+              <td style="font-size: 0; line-height: 0;" height="20"><table align="left"  cellpadding="0" cellspacing="0" >
+                  <tr>
+                    <td >&nbsp;</td>
+                  </tr>
+                </table></td>
+            </tr>
+            <tr> 
+              <!-- Introduction area -->
+              <td><table width="96%"  align="left" cellpadding="0" cellspacing="0">
+                  <tr> 
+                    <!-- row container for TITLE/EMAIL THEME -->
+                    <td align="Left" style="font-size: 25px; font-weight: 300; line-height: 2.5em; color: #929292; font-family: sans-serif;"><strong>Creating New Words using Machine Learning</strong></td>
+                  </tr>
+                  <tr> 
+                    <!-- row container for Tagline -->
+                    <td align="Left" style="font-size: 16px; font-weight:1000; color: #929292; font-family: sans-serif;">&nbsp;Date: October 30, 2020 → January 9, 2021 </td>
+                  </tr>
+				  <tr> 
+                    <!-- row container for Tagline -->
+                    <td align="Left" style="font-size: 16px; font-weight:1000; color: #929292; font-family: sans-serif;">&nbsp;Type: Personal Project, Machine Learning and Computer Science  </td>
+                  </tr>
+                  <tr>
+                    <td style="font-size: 0; line-height: 0;" height="20"><table width="96%" align="left"  cellpadding="0" cellspacing="0">
+                        <tr> 
+                          <!-- HTML Spacer row -->
+                          <td style="font-size: 0; line-height: 0;" height="20">&nbsp;</td>
+                        </tr>
+                      </table></td>
+                  </tr>
+                  <tr> 
+                    <!-- Row container for Intro/ Description -->
+                    <td align="left" style="font-size: 14px; font-style: normal; font-weight: 100; color: #929292; line-height: 1.8; text-align:justify; padding:10px 20px 0px 20px; font-family: sans-serif;"></td>
+                  </tr>
+                </table></td>
+            </tr>
+	
+			   <tr> 
+                    <!-- row container for Tagline -->
+                    <td align="Left" style="padding:20px 0px 0px 5px; font-size: 16px; font-weight:1000; color: #929292; font-family: sans-serif;"><strong>Basic Explanation&nbsp;&nbsp;</strong></td>
+            </tr>
+            <tr> 
+              <!-- HTML Spacer row -->
+              <td style="font-size: 16; line-height: 1.6;" height="10"><table width="96%" align="left"  cellpadding="0" cellspacing="0">
+                 
+				  <tr>
+				  
+				  
+				  <td><img src= "images/GAN.png" height="250" width="400"></td>
+				  
+				  
+				  
+				  </tr>
+				 <tr>
+                   		<td align="Left" style="padding:20px 0px 0px 5px; font-size: 16px; font-weight:1000; color: #929292; font-family: sans-serif;"><p>A GAN is a type of model that competes against itself to improve. It does this with two different machine learning models. One neural network. called the generator, generates an image and the other neural network, called the discriminator, tries to predict which one is real or fake. The generator’s goal is to fool the discriminator while the discriminator's goal is to predict the real image from the one generated from the generator.</p>
+
+<p>As the name suggests, this type of machine learning model generates media. Typically, for GAN’s they generate images but they can create anything. For this project, I wrote a GAN software from scratch and had it try to create new English-sounding words. To train the GAN, I grabbed a bunch of word data from Wikipedia and trained it right in the browser.</p>
+
+
+<p>Below is a working model of one! It does however produce mediocre results because of how unstable this type of machine learning model is. </p>
+
+
+</td>
+                  </tr>
+				 
+			  <tr>
+				  
+				  <td><table align="Left" style="padding:20px 0px 0px 5px; font-size: 16px; font-weight:1000; color: #929292; font-family: sans-serif;">
+					  
+					  <tr>
+						  <td><p><strong>Iterations</strong></p></td>
+					  </tr>
+					  
+					  <tr>
+						  <td><input id="it" value = " " readonly></td>
+					  </tr>
+				  	<tr>
+				  	
+						<td><p><strong>Loss</strong> is the measurement of how off a computer is from the true value. What you’ll see is the discriminator’s loss will get really low while the generator’s loss gets really high. With these networks, we really want the opposite to occur:</p></td>
+				  
+				  </tr>
+					  
+					  <tr>
+						  <td><p><strong>Loss (Discriminator)</strong></p></td>
+					  </tr>
+				  
+				 	   <tr>
+						  <td><input id="Loss" value = " " readonly></td>
+					  </tr>
+					  
+					  <tr>
+						  <td><p><strong>Loss (Generator)</strong></p></td>
+					  </tr>
+			  		
+			  		<tr>
+						  <td><input id="Loss2" value = " " readonly></td>
+					  </tr>
+			  		
+					  <tr>
+						  <td><p><strong>Generated word</strong></p></td>
+					  </tr>
+	  
+	  				<tr>
+						  <td><input id="Gen" value = " " readonly></td>
+					  </tr>
+					  <tr>
+						  <td><button onclick="valueChange()">Start</button></td>
+					  </tr>
+						<tr>
+						  <td><button onclick="stop()">Stop</button></td>
+					  </tr>
+					  
+					  </table></td>
+				  
+				  
+				  </tr>
+			  
+				  
+				
+                </table></td>
+            </tr>
+			  
+			  
+			
+			  </tr>
+			  
+			  
+			  
+			 
+			 
+			  
+			  
+			 
+<!-- SPLIT -->
+	  
+	  		
+	  <!-- SPLIT -->
+	  
+	  	
+  </tbody>
+</table>
+
+<script type="text/javascript">
+	
+	//Notes about Code
+//Last Revision on 11/1/20
+
+/* 
+This is the main code I wrote for my GAN or General Adversarial Network that produdes relistic sounding words in English. All code was written by me and I know it might look a little messy and redundunt at times but this is my first big project in Javascript and I'm still getting it down. If you got here, then you are just like me and love to know how things tick. I left some helpful comments in my code that shows what everything does. I recommend that you learn how a GAN works so more of my code comments make sense. Anyway, have fun!
+*/
+
+
+
+
+//This keeps track of the iterations that have passed
+var count = 0;
+
+//This is the main control of the Neural Network, each item in the list controls how many neurons that layer gets. Ex. the Input layer of the Generator is 10 neurons and the first hidden layer has 50 neurons. 
+var genNeuronSetup = [50, 100, 100, 270];
+var disNeuronSetup = [270, 10, 10, 1];
+var RealData = ["the", "of", "and", "to", "a", "in", "that", "was", "he", "his", "with", "is", "it", "for", "as", "had", "you", "not", "be", "on", "at", "by", "her", "which", "have", "or", "from", "this", "but", "all", "him", "she", "were", "they", "my", "are", "so", "me", "their", "an", "one", "de", "we", "who", "would", "said", "been", "no", "will", "them", "when", "if", "there", "more", "out", "any", "up", "into", "your", "has", "do", "what", "could", "but", "our", "than", "other", "some", "very", "man", "upon", "about", "its", "only", "time", "may", "la", "like", "little", "then", "now", "should", "can", "made", "did", "such", "great", "must", "these", "two", "before", "see", "us", "over", "et", "much", "know", "after", "she", "first", "i", "good", "down", "never", "most", "where", "those", "old", "men", "own", "shall", "le", "came", "without", "come", "make", "being", "day", "might", "long", "through", "himself", "work", "how", "go", "am", "way", "en", "even", "que", "many", "well", "say", "it", "every", "too", "think", "under", "life", "went", "back", "same", "last", "found", "take", "people", "thought", "here", "still", "les", "just", "while", "def", "also", "again", "against", "place", "away", "him", "get", "young", "die", "though", "yet", "give", "hand", "eyes", "ever", "part", "des", "left", "things", "saw", "years", "took", "nothing", "put", "new", "three", "always", "und", "off", "once", "another", "right", "between", "each", "face", "because", "whom", "few", "der", "tell", "son", "love", "far", "un", "seemed", "house", "hw", "got", "head", "called", "looked", "whole", "set", "find", "world", "having", "thing", "both", "told", "let", "look", "night", "going", "heard", "mind", "knew", "heart", "seen", "se", "days", "qui", "name", "among", "done", "better", "full", "something", "du", "moment", "gave", "country", "er", "almost", "soon", "them", "course", "cannot", "asked", "small", "ne", "enough", "il", "want", "side", "woman", "however", "home", "brought", "whose", "nor", "father", "me", "quite", "words", "given", "till", "pos", "taken", "use", "hands", "does", "until", "end", "turned", "rather", "thou", "best", "p", "since", "felt", "word", "used", "dans", "light", "next", "began", "less", "present", "large", "water", "den", "within", "door", "poor", "certain", "works", "pas", "sent", "often", "tt", "stood", "power", "room", "half", "public", "themselves", "morning", "myself", "keep", "money", "mother", "her", "b", "une", "thy", "hundred", "ets", "je", "kind", "order", "war", "means", "form", "pour", "how", "round", "received", "voice", "believe", "y", "white", "anything", "near", "others", "thus", "passed", "matter", "year", "read", "true", "you", "point", "herself", "friend", "state", "person", "wife", "already", "above", "high", "met", "says", "together", "why", "perhaps", "death", "dear", "fact", "least", "case", "hear", "known", "four", "hope", "au", "along", "leave", "sure", "children", "during", "open", "yes", "new", "several", "indeed", "therefore", "number", "feet", "wish", "gone", "girl", "lay", "either", "held", "whether", "letter", "ce", "help", "free", "general", "vous", "second", "alone", "return", "women", "nature", "times", "land", "became", "become", "thousand", "body", "air", "thee", "call", "sat", "speak", "united", "itself", "states", "why", "hour", "reason", "forth", "feel", "looking", "following", "rest", "terms", "business", "electronic", "behind", "making", "zu", "cried", "answered", "plus", "really", "friends", "towards", "child", "lost", "human", "replied", "kept", "coming", "five", "king", "different", "care", "fire", "short", "manner", "mean", "city", "fell", "able", "need", "these", "question", "family", "boy", "cause", "do", "seems", "strong", "par", "ten", "possible", "dead", "returned", "bring", "sur", "foundation", "live", "around", "doubt", "hard", "p", "soul", "ask", "sort", "fine", "hold", "lady", "black", "beautiful", "sense", "close", "subject", "turn", "town", "followed", "law", "evening", "truth", "sa", "ground", "understand", "show", "lui", "written", "n", "common", "see", "est", "ought", "fear", "dark", "party", "not", "ready", "force", "carried", "early", "said", "talk", "account", "answer", "ja", "paid", "across", "arms", "necessary", "si", "sometimes", "here", "earth", "spirit", "saying", "das", "idea", "character", "reached", "copyright", "sea", "appeared", "van", "sight", "interest", "six", "general", "von", "book", "seem", "taking", "ye", "continued", "avec", "spoke", "strange", "copy", "age", "meet", "longer", "story", "sn", "deep", "nearly", "line", "further", "feeling", "later", "suddenly", "sir", "added", "sich", "brother", "neither", "stand", "art", "real", "nicht", "toward", "rose", "es", "beyond", "again", "laws", "sie", "miles", "everything", "pretty", "act", "suppose", "comes", "ich", "except", "table", "hours", "river", "cut", "eye", "change", "past", "nous", "natural", "entered", "none", "happy", "position", "else", "clear", "late", "bed", "laid", "cold", "bad", "sound", "remember", "view", "life", "led", "low", "time", "mit", "forward", "fair", "although", "makes", "purpose", "knowledge", "living", "pay", "receive", "blood", "comme", "army", "daughter", "note", "opened", "run", "el", "doing", "fall", "dem", "effect", "pass", "sun", "road", "ety", "avait", "ses", "husband", "charge", "tried", "certainly", "important", "wanted", "service", "front", "red", "probably", "future", "pr", "placed", "especially", "quill", "desire", "elle", "send", "office", "greater", "te", "big", "letters", "peace", "hair", "pleasure", "lived", "including", "fld", "horse", "glad", "remained", "opinion", "various", "het", "hath", "bien", "history", "play", "agreement", "died", "tout", "cd", "wrote", "wild", "ist", "ran", "government", "donations", "save", "als", "length", "master", "latter", "persons", "col", "hardly", "gold", "paper", "particular", "mark", "information", "cette", "bear", "fellow", "church", "attention", "according", "wind", "per", "company", "walked", "chief", "strength", "all", "gentleman", "mine", "object", "us", "unless", "duty", "drew", "single", "distance", "books", "deal", "mais", "visit", "man", "foot", "beauty", "beginning", "heavy", "ein", "standing", "knows", "thinking", "loved", "carry", "immediately", "unto", "e", "try", "rich", "plain", "sweet", "seeing", "minutes", "follow", "trouble", "yourself", "write", "chance", "regard", "filled", "trees", "ou", "presence", "merely", "auf", "secret", "former", "mere", "appear", "struck", "learned", "arm", "giving", "happened", "influence", "instead", "condition", "twenty", "work", "window", "afraid", "below", "wrong", "months", "day", "silence", "broken", "raised", "u", "outside", "getting", "caught", "simple", "lips", "figure", "ago", "reach", "easily", "noble", "whatever", "dit", "thoughts", "een", "ancient", "blue", "parts", "leaving", "agree", "generally", "showed", "easy", "ship", "action", "stay", "hat", "moved", "property", "fit", "enemy", "states", "way", "grew", "afterwards", "born", "places", "impossible", "worth", "http", "arrived", "occasion", "remain", "please", "green", "married", "that", "third", "mouth", "sleep", "period", "fresh", "faith", "system", "writing", "there", "boys", "horses", "entirely", "out", "smile", "blockquote", "goes", "usual", "covered", "appearance", "bound", "respect", "quiet", "beside", "dinner", "expression", "stopped", "slowly", "considerable", "somewhat", "walk", "away", "wonder", "greatest", "provide", "etext", "perfect", "court", "exclaimed", "youth", "cost", "etc", "scarcely", "sudden", "evil", "danger", "main", "battle", "wished", "command", "notice", "piece", "political", "sister", "trying", "proper", "c", "started", "considered", "allowed", "expected", "joy", "private", "bright", "result", "school", "sit", "language", "house", "los", "individual", "south", "meant", "food", "wide", "now", "formed", "week", "world", "seven", "tears", "such", "opportunity", "copies", "value", "och", "waiting", "broke", "observed", "support", "due", "village", "je", "fight", "experience", "himself", "reading", "or", "medium", "stone", "begin", "so", "one", "circumstances", "domain", "discovered", "personal", "access", "speaking", "learn", "lines", "offered", "sitting", "grand", "efforts", "society", "boat", "sans", "takes", "hand", "date", "original", "up", "believed", "difficult", "conversation", "wait", "tree", "produced", "officers", "paragraph", "cast", "month", "top", "supposed", "tone", "laughed", "girls", "intended", "determined", "appears", "step", "honour", "direction", "gives", "news", "terrible", "silent", "produce", "eight", "ces", "prepared", "lie", "scene", "lives", "effort", "attempt", "likely", "associated", "drawn", "fifty", "fast", "street", "wall", "turning", "troops", "modern", "usually", "military", "author", "field", "heaven", "fee", "pleased", "quickly", "perfectly", "authority", "soft", "bit", "chair", "cry", "hot", "talking", "passing", "eyes", "named", "summer", "dat", "afternoon", "allow", "declared", "passage", "music", "soldiers", "required", "picture", "simply", "pleasant", "fixed", "permission", "speech", "marriage", "here", "study", "race", "religious", "beneath", "ill", "official", "houses", "distribute", "spent", "ladies", "leaves", "justice", "straight", "trust", "break", "equal", "eat", "v", "killed", "threw", "physical", "religion", "watch", "understood", "forget", "ex", "on", "instant", "ordered", "middle", "looks", "sin", "success", "built", "matters", "lord", "using", "obliged", "fortune", "spite", "wise", "provided", "moral", "keeping", "meeting", "aux", "plan", "walls", "touch", "closed", "running", "rise", "flowers", "social", "higher", "rate", "garden", "do", "changed", "corner", "steps", "orders", "eine", "island", "spring", "offer", "pain", "wood", "instance", "house", "vain", "directly", "sufficient", "happiness", "journey", "pale", "dress", "ourselves", "conduct", "worthy", "lead", "non", "lying", "grave", "possession", "legal", "lower", "caused", "special", "other", "cases", "stop", "night", "nation", "al", "warm", "degree", "memory", "shown", "promise", "wie", "situation", "names", "spoken", "foreign", "deux", "members", "vast", "ma", "escape", "sake", "loss", "proved", "in", "complete", "passion", "leur", "shot", "difficulty", "courage", "forced", "ordinary", "mighty", "fallen", "native", "more", "concerning", "accepted", "board", "serious", "spread", "ways", "del", "marked", "face", "spot", "twelve", "wonderful", "questions", "prevent", "expect", "camp", "di", "move", "winter", "excellent", "additional", "tax", "consider", "fait", "car", "faire", "distribution", "example", "silver", "glass", "share", "century", "engaged", "forms", "class", "start", "shook", "train", "mentioned", "minute", "lot", "men", "enter", "decided", "particularly", "greatly", "method", "finally", "curious", "opposite", "prove", "described", "pure", "a", "floor", "promised", "existence", "thirty", "head", "know", "worse", "refund", "affairs", "sorry", "servant", "besides", "safe", "working", "anxious", "doctor", "thrown", "extent", "narrow", "pride", "breath", "room", "repeated", "similar", "surprise", "exactly", "place", "not", "obtain", "dog", "iron", "gentlemen", "marry", "crowd", "sought", "con", "knowing", "rule", "dollars", "page", "accept", "watched", "holding", "shore", "trademark", "drink", "officer", "two", "judge", "serve", "attack", "north", "movement", "thou", "possessed", "meaning", "million", "glance", "laugh", "trade", "lose", "search", "talked", "broad", "grace", "distant", "home", "sign", "presented", "highest", "prince", "advantage", "difference", "clearly", "honest", "freely", "royal", "interesting", "seat", "heads", "before", "path", "proud", "posted", "finished", "country", "space", "request", "fully", "sad", "quick", "ideas", "evidence", "sky", "auch", "ones", "fancy", "choose", "captain", "dropped", "dry", "taste", "sword", "confidence", "amount", "health", "liberty", "feelings", "wine", "rising", "lies", "da", "shut", "ships", "settled", "report", "conditions", "created", "secure", "permitted", "remembered", "agreed", "daily", "seek", "obtained", "regarded", "national", "tall", "principal", "portion", "carefully", "points", "mountains", "add", "measure", "glory", "expressed", "dare", "clothes", "importance", "powers", "peculiar", "building", "people", "brave", "yes", "smiled", "honor", "dream", "hung", "refused", "mountain", "gentle", "occupied", "ears", "weeks", "sick", "south", "thick", "progress", "darkness", "claim", "pieces", "heart", "im", "game", "aid", "check", "immediate", "mind", "hearts", "succeeded", "aside", "file", "contrary", "fond", "reply", "i", "served", "draw", "tu", "holy", "growing", "throughout", "bottom", "distributed", "events", "grow", "animal", "leading", "touched", "false", "expense", "telling", "judgment", "numerous", "sides", "finding", "frequently", "creature", "door", "hill", "altogether", "well", "famous", "equally", "opening", "otherwise", "played", "cross", "active", "sharp", "bank", "surely", "tous", "forgotten", "advance", "capital", "sons", "facts", "desired", "willing", "surprised", "seized", "contact", "che", "hills", "necessity", "powerful", "naturally", "taught", "op", "established", "golden", "entire", "streets", "intellectual", "employed", "servants", "anyone", "kill", "bread", "crossed", "presently", "thin", "failed", "suffered", "fate", "phrase", "evidently", "sont", "waited", "o", "stream", "coast", "this", "hall", "popular", "aware", "pointed", "appointed", "las", "bent", "gathered", "slight", "group", "aber", "apparently", "remarkable", "remains", "neck", "faces", "forest", "hast", "encore", "rock", "removed", "bore", "grown", "published", "birds", "midst", "divine", "distributing", "tells", "papers", "carriage", "joined", "noch", "characters", "years", "population", "direct", "wealth", "comfort", "list", "blow", "tender", "stranger", "species", "handsome", "worked", "prepare", "sacred", "liked", "noticed", "actually", "yellow", "surface", "consequence", "pity", "throw", "habit", "weak", "putting", "distinguished", "pray", "nations", "freedom", "stage", "mir", "back", "others", "angry", "brown", "satisfied", "rain", "express", "principle", "advanced", "owner", "tired", "poet", "practice", "familiar", "reader", "por", "delight", "works", "becomes", "weather", "fish", "oli", "nine", "interested", "approach", "weight", "truly", "material", "death", "be", "rules", "fingers", "right", "carrying", "accompanied", "suggested", "rode", "total", "grass", "walking", "resolved", "principles", "quarter", "rights", "style", "regular", "dangerous", "song", "og", "saved", "education", "shadow", "wholly", "contain", "drive", "virtue", "fashion", "driven", "proceeded", "follows", "spirits", "gate", "dressed", "sentence", "twice", "wore", "extraordinary", "guard", "hearing", "beat", "informed", "burst", "too", "calm", "dont", "forces", "watching", "animals", "mass", "som", "price", "wants", "science", "increased", "treated", "lifted", "thank", "discover", "receiving", "stands", "nur", "based", "explained", "proposed", "heat", "ear", "address", "aus", "previous", "genius", "constant", "sending", "imagine", "water", "guess", "chose", "hopes", "nach", "waters", "impression", "uncle", "valley", "snow", "su", "unknown", "printed", "statement", "comply", "machine", "woods", "lovely", "windows", "suffer", "farther", "quietly", "hands", "down", "c", "interests", "occurred", "fut", "rank", "listened", "arrival", "needed", "tongue", "remarked", "relations", "absolutely", "final", "lo", "larger", "edge", "ceased", "loud", "capable", "moon", "mention", "box", "struggle", "q", "season", "wounded", "double", "west", "forty", "drove", "calling", "moving", "qex", "favour", "enemies", "moi", "burning", "bearing", "fifteen", "volunteers", "busy", "title", "series", "pounds", "admitted", "countries", "collection", "slaves", "mission", "size", "possibly", "duties", "om", "upper", "priest", "vessel", "subjects", "companion", "faithful", "minds", "height", "nice", "destroy", "separate", "suffering", "absence", "breast", "ni", "parties", "content", "noise", "demand", "inhabitants", "hoped", "listen", "release", "pair", "numbers", "buy", "gods", "remove", "sympathy", "completely", "sum", "moments", "falling", "slow", "begun", "hurt", "qau", "shoulders", "current", "wisdom", "continue", "niet", "rapidly", "side", "amongst", "gained", "affection", "splendid", "advice", "join", "square", "whispered", "bitter", "mich", "alive", "han", "things", "pressed", "addition", "drawing", "task", "fool", "kingdom", "come", "cruel", "shape", "together", "slave", "birth", "policy", "post", "credit", "sold", "superior", "relation", "yours", "storm", "catch", "morning", "delicate", "palace", "seated", "peu", "won", "constantly", "ihm", "loose", "legs", "zijn", "soldier", "empty", "ils", "imagination", "demanded", "practical", "unable", "quality", "sorrow", "belief", "civil", "bird", "um", "dozen", "asked", "committed", "station", "nearer", "chosen", "affair", "explain", "literary", "satisfaction", "shows", "friendly", "fort", "happen", "admit", "smoke", "dying", "consideration", "fighting", "brief", "kindly", "huge", "literature", "bought", "addressed", "dass", "apply", "proof", "gradually", "spiritual", "increase", "ik", "ihr", "flesh", "partly", "fruit", "deeply", "east", "connected", "paying", "brilliant", "hij", "supply", "coat", "thinks", "firm", "nobody", "ride", "myself", "ring", "shoulder", "own", "march", "enjoy", "centre", "worst", "member", "bringing", "whenever", "friendship", "supper", "useful", "wear", "ii", "done", "reasons", "sooner", "attached", "was", "to", "instantly", "shame", "rough", "minister", "protect", "intention", "assistance", "highly", "bodies", "sein", "applied", "soil", "license", "features", "gain", "stated", "sd", "cover", "objects", "smiling", "couple", "inside", "rocks", "commanded", "fought", "breakfast", "crime", "grief", "conscience", "fields", "notes", "exercise", "understanding", "assured", "require", "det", "relief", "fail", "buried", "female", "welcome", "playing", "dignity", "hate", "needs", "countenance", "alone", "site", "lands", "motion", "rendered", "blind", "extreme", "fairly", "mad", "mile", "process", "showing", "editions", "bare", "poetry", "is", "brain", "drop", "surrounded", "parents", "rare", "asking", "entrance", "introduced", "degrees", "control", "careful", "clean", "conscious", "stones", "durch", "variety", "donc", "immense", "etait", "becoming", "devoted", "everybody", "level", "figures", "directed", "raise", "dull", "eager", "stars", "another", "sacrifice", "compelled", "faint", "teeth", "thoroughly", "labor", "pulled", "text", "escaped", "colour", "cup", "gray", "strike", "lest", "description", "citizens", "days", "end", "tea", "precious", "custom", "message", "rooms", "choice", "below", "divided", "older", "granted", "excited", "sous", "voice", "sing", "einen", "knees", "laughing", "connection", "off", "prayer", "mercy", "results", "awful", "closely", "fly", "whilst", "accustomed", "evident", "fees", "avoid", "war", "solemn", "composed", "mental", "doors", "computer", "theory", "suit", "ended", "cities", "sprang", "recognized", "devil", "stories", "term", "limited", "weary", "arose", "violent", "fault", "nothing", "crown", "seldom", "intelligence", "actual", "hidden", "acquaintance", "volume", "status", "color", "sufficiently", "hurried", "aussi", "mistress", "excitement", "requirements", "praise", "writer", "plenty", "delivered", "dust", "go", "pocket", "ihn", "represented", "protection", "una", "event", "arranged", "goods", "approached", "nose", "dreadful", "tale", "terror", "concerned", "beg", "chamber", "kissed", "containing", "scattered", "say", "remaining", "attitude", "visited", "returning", "ei", "whence", "perceived", "innocent", "fill", "utterly", "quand", "year", "chiefly", "natives", "yards", "cool", "article", "attended", "cousin", "pictures", "circle", "moment", "energy", "of", "extremely", "learning", "included", "dire", "prison", "liability", "wishes", "singing", "providing", "temps", "favor", "younger", "once", "production", "kindness", "votre", "souls", "calls", "clouds", "ahead", "wenn", "provisions", "acts", "vessels", "causes", "anger", "fellows", "worn", "plans", "absolute", "contained", "charming", "yesterday", "salt", "reported", "manners", "rushed", "expenses", "victory", "local", "att", "castle", "lover", "increasing", "vision", "pages", "bold", "severe", "rien", "explanation", "services", "leurs", "miserable", "successful", "branches", "views", "sir", "oder", "performed", "observe", "ease", "lake", "signs", "teach", "count", "worship", "stock", "quantity", "kinds", "earlier", "good", "interrupted", "apart", "voices", "confess", "bed", "convinced", "valuable", "sell", "roof", "growth", "commercial", "aan", "articles", "pardon", "record", "replacement", "development", "stepped", "base", "treatment", "dogs", "feet", "fat", "type", "wir", "mistake", "glorious", "thing", "inclined", "anywhere", "milk", "bridge", "excuse", "humble", "everywhere", "meat", "cela", "skin", "gently", "likewise", "love", "affected", "consent", "generous", "adopted", "acquainted", "helped", "queen", "guide", "wit", "setting", "throne", "indicate", "visible", "flat", "formerly", "armed", "brothers", "wicked", "universal", "exact", "readily", "ignorant", "voyage", "thousands", "name", "related", "striking", "homme", "paused", "toute", "foolish", "trial", "unfortunate", "singular", "sees", "anybody", "gift", "proportion", "feared", "law", "hotel", "spend", "fled", "attend", "witness", "remark", "mysterious", "audience", "safety", "eternal", "skill", "guns", "located", "bow", "readable", "fierce", "earnest", "kings", "shalt", "destroyed", "sail", "bill", "suis", "extended", "cattle", "pushed", "sounds", "plants", "temple", "admiration", "alle", "band", "links", "med", "dance", "refuse", "doubtless", "prisoner", "details", "blessed", "police", "enjoyed", "patient", "gay", "source", "anxiety", "swept", "flight", "domestic", "abroad", "toujours", "glanced", "division", "unhappy", "stretched", "fatal", "effects", "father", "displayed", "forgot", "ends", "einer", "win", "over", "sang", "wound", "guilty", "lack", "store", "doctrine", "picked", "belong", "slept", "disk", "lad", "labour", "kiss", "library", "slightly", "conclusion", "shining", "troubled", "form", "range", "islands", "changes", "habits", "lately", "wondered", "temper", "applicable", "furnished", "afford", "render", "departure", "hatte", "national", "qualities", "hence", "toutes", "slavery", "gets", "painted", "monsieur", "utmost", "delighted", "image", "uttered", "sentiment", "ruin", "resolution", "belonged", "argument", "thy", "arise", "melancholy", "maid", "words", "wet", "regret", "files", "online", "thence", "einem", "banks", "strongly", "compliance", "governor", "curiosity", "lighted", "reference", "hide", "prisoners", "displaying", "opinions", "rapid", "disposed", "breaking", "waste", "defective", "ball", "behold", "sometimes", "inquired", "families", "desert", "fire", "mes", "sea", "reaching", "ground", "ice", "hitherto", "reduced", "woman", "branch", "necessarily", "mounted", "lake", "methods", "doth", "bei", "discovery", "companions", "midnight", "retired", "entre", "possess", "occasionally", "invited", "dared", "celebrated", "plant", "shade", "acted", "cloud", "plainly", "ashamed", "expedition", "reasonable", "press", "frightened", "trembling", "thanks", "concluded", "self", "profit", "proceed", "loves", "forgive", "begged", "utter", "triumph", "sand", "wife", "money", "reality", "web", "permanent", "university", "limitation", "properly", "history", "consciousness", "nos", "distinct", "reputation", "spn", "harm", "listening", "agreeable", "wings", "uns", "flung", "themselves", "suggestion", "comfortable", "savage", "bowed", "rage", "classes", "ere", "gazed", "measures", "origin", "despair", "confusion", "region", "creatures", "accomplished", "jamais", "equivalent", "thine", "shop", "recent", "probable", "stick", "will", "fourth", "majority", "reign", "preserve", "risk", "print", "major", "dreams", "urged", "flower", "company", "oh", "appeal", "fleet", "turns", "sugar", "murder", "mother", "cheeks", "itself", "asleep", "air", "violence", "copying", "male", "difficulties", "shouted", "grey", "spare", "etta", "announced", "derived", "herself", "solid", "poem", "approaching", "time", "blame", "belonging", "see", "borne", "assumed", "magnificent", "fois", "benefit", "millions", "calculated", "household", "disposition", "flying", "any", "aunt", "estate", "painful", "host", "rolled", "waves", "hem", "profits", "matter", "towns", "gun", "vor", "doch", "thrust", "destruction", "bosom", "corps", "speed", "market", "punishment", "kitchen", "noon", "materials", "dead", "finger", "handed", "attempted", "frequent", "quelque", "raising", "suspicion", "more", "governor", "ages", "enough", "keen", "fame", "opposition", "design", "philosophy", "gaze", "grant", "compared", "patience", "horror", "stairs", "hero", "hanging", "finds", "moins", "emotion", "lonely", "para", "build", "yes", "softly", "somewhere", "wretched", "secretary", "delightful", "ignorance", "lieu", "lights", "managed", "did", "ha", "beloved", "amid"];
+//This function is the starting point of the whole operation. When you click the button you are brought here. 
+	
+var started;
+var start = false;
+var alreadyGoing = false;
+function valueChange() {
+	
+	//This gets all the words from the training data and puts it in one giant list to be referenced from. 
+	
+	
+	
+	if (start == false) {
+		
+		//These two for loops set up the Biases in each Neural Network
+	for (i = 0; i < genNeuronSetup.length - 1; i++) {
+		
+		for (ii = 0; ii < genNeuronSetup[i + 1]; ii++) {
+			var save = 0;
+			var layers = i;
+			BiasGen.push({save, layers});
+		}
+	}
+	
+	
+	for (i = 0; i < disNeuronSetup.length - 1; i++) {
+		for (ii = 0; ii < disNeuronSetup[i + 1]; ii++) {
+			var save = 0;
+			var layers = i;
+			BiasDis.push({save, layers});
+		}
+	}
+	
+	//These two loops set up the Weights in each Neural Network.
+	for (i = 0; i < genNeuronSetup.length - 1; i++) {
+		WeightSetupGen(i, genNeuronSetup[i] * genNeuronSetup[i + 1]);
+	}
+	
+	keepup = -1;
+	
+	
+	for (i = 0; i < disNeuronSetup.length - 1; i++) {
+		WeightSetupDis(i, disNeuronSetup[i] * disNeuronSetup[i + 1]);
+	}
+	
+	//This sets up all the values in the GenerationValues for Training
+	for (i = 0; i < batchsize; i++) {
+		
+		
+		for (i2 = 0; i2 < genNeuronSetup[0]; i2++) {
+			
+			save = (Math.random() * 2) - 1;
+		
+			layers = (i);
+			
+			GenerationValues.push({save, layers});
+			
+			
+		}
+		
+		
+	}
+	
+	
+		start = true;
+	//This interval makes the network train once every 20 milliseconds from the last time it completed it's last training cycle. I did this so when I was debugging all my code, I could see the results rather then them flashing by in a heartbeat. 
+	
+		
+	}
+	
+	if (alreadyGoing == false) {
+		
+		started = setInterval(Train, 20);
+		
+	}
+	
+	alreadyGoing = true;
+	
+	
+
+	
+	
+}
+	
+function stop() {
+	
+	
+	clearInterval(started);
+	alreadyGoing = false;
+	
+	
+	
+	
+}
+				
+	
+//This name is kind of misleading, originally it would have held the Random noise that goes into the generator, but I changed it so that it holds all the hidden layer values and outputs of the generator.
+var RandomNoise = [];
+
+
+//Just a side note, everytime I say "Gen" in a variable, it's part of the generator, and everytime I say "Dis" in a variable, it's part of the discriminator
+
+
+
+//These two arrays hold the weights of each Neural Network. 
+var WeightGen = [];
+var WeightDis = [];
+
+//These two arrays hold the biases of each Neural Network.
+var BiasGen = [];
+var BiasDis = [];
+
+//This function sets up the Weights of the Generator
+var keepup = -1;
+function WeightSetupGen(layers, weightCount) {
+	
+	
+	
+	for(j = 0; j < weightCount; j++){
+		keepup++;
+		
+		//Sets up a random decimal between -1 and 1.
+		var save = ((Math.random() * 2) - 1) * 1;
+		
+		WeightGen[keepup] = {layers, save}
+	}
+		
+	
+	
+	
+}
+
+//This function sets up the Weights of the Discriminator
+function WeightSetupDis(layers, weightCount) {
+	
+	
+	
+	for(j = 0; j < weightCount; j++){
+		keepup++;
+		
+		//Sets up a random decimal between -1 and 1.
+		var save = (Math.random() * 2) - 1;
+		
+		WeightDis[keepup] = {layers, save}
+	}
+		
+	
+	
+	
+}
+
+//The math behind the TanH function, I know that there is a Math.TanH function but I think the TanH function is too fun to program for some reason. It just looks so satisfying. 
+function TanH(value) {
+	return (2 / (1 + Math.exp(-1 * value))) - 1;
+}
+
+//The main function for training the Discriminaor. I might have changed this because it was really redundunt and I could have merged the generator with it. If that is the case then it looks like I forgot to delete this comment! 
+function BackpropigationBias(CostList, layer, BiasList, NeuronList, batchNum) {
+	
+				var Finished = [];
+				//Gets the Bias values from the current layer
+				var B = GetThing(layer, BiasList);
+	
+				//The main system for updating the bias values
+				for (w = 0; w < CostList.length; w++) {
+					
+						//Calculates the new bias values the same way from above
+						var save = B[w] - (CostList[w] * Lr);
+						var layers = layer;
+						var batch = batchNum;
+				
+						//Adds it to a list where it will later be averaged
+						Finished.push({layers, save, batch});
+				}
+				
+				return Finished;
+	
+}
+
+
+function BackpropigationWeight(CostList, layer, WeightList, NeuronList, batchNum) {
+	
+				var Finished = [];
+		
+				//Gets the Weight values from the current layer 
+				var V = GetThing(layer, WeightList);
+				
+				//Gets the Hidden layer values from the current layer
+				var P = GetThing(layer, NeuronList);
+				
+				//This uses the chain rule to calculate new weight values
+				var keep = -1;
+				for (i9 = 0; i9 < CostList.length; i9++) {
+					
+					for (O = 0; O < P.length; O++) {
+					
+						keep++;
+						//The chain Rule
+						var chain = CostList[i9] * P[O];
+				
+						//Subtracts the weight from the part of the chain
+						var save = V[keep] - (chain * Lr);
+						var layers = layer;
+						var batch = batchNum;
+				
+						//Adds it to a list where it will later be averaged
+						Finished.push({layers, save, batch});
+					}
+				}
+	
+				
+				return Finished;
+	
+}
+
+function BackpropigationError(CostList, layer, WeightList, NeuronList) {
+	
+				var preCost = [];
+	
+				//Gets the Weight values from the current layer 
+				var V = GetThing(layer, WeightList);
+				
+				//Gets the Hidden layer values from the current layer
+				var P = GetThing(layer, NeuronList);
+				
+				//The main system for getting the error for hidden values
+				for (i2 = 0; i2 < P.length; i2++) {
+				
+					var s = 0;
+					var Keep = i2;
+					for (i3 = 0; i3 < CostList.length; i3++) {
+						
+						//Calculates part of the error for a neuron and adds it with the other summed up values in the variable "s";
+						s += CostList[i3] * V[Keep];
+
+						Keep += P.length;
+					
+					
+					}
+				
+					
+					var save = s * (1 - Math.pow(P[i2], 2));
+					preCost.push(save);
+				
+				}
+	
+				return preCost;
+	
+}
+
+
+//The main forward pass for the discriminator and the generator. Works one layer at a time. 
+function ForwardWeightPass(layer, weights, bias, reference, valueList) {
+	
+	//Current weights
+	var w = [];
+	
+	//Current Biases
+	var b = [];
+	
+	//Previous Neurons from last layer
+	var priorNeurons = [];
+	
+	//The new values for the next layer
+	let New = [];
+	
+	
+	//Gets the weights for the current layer and puts them in "w"
+	for (i9 = 0; i9 < weights.length; i9++) {
+		
+		if (weights[i9].layers === layer) {
+			
+			w.push(weights[i9].save);
+			
+		}
+	}
+	
+	
+	
+	//Gets the biases for the current layer and puts them in "b"
+	for (i9 = 0; i9 < bias.length; i9++) {
+		
+		if (bias[i9].layers === layer) {
+			
+			b.push(bias[i9].save);
+			
+		}
+	}
+	
+	//Gets the previous neurons from the last layer and puts them in "priorNeurons"
+	for (i9 = 0; i9 < valueList.length; i9++) {
+		
+		if (valueList[i9].layers === layer) {
+			priorNeurons.push(valueList[i9].save);
+		}
+		
+	}
+	
+	
+	//Calculates the values for the next layer
+	var keepup = -1;
+	for (i9 = 0; i9 < reference[layer + 1]; i9++) {
+		
+		
+		var added = 0;
+		for (ii = 0; ii < reference[layer]; ii++) {
+				
+			keepup++;
+			added += priorNeurons[ii] * w[keepup];
+			
+		}
+		
+		var final = added + b[i9];
+
+		//puts the final value through the TanH function
+		var act = TanH(final);
+		
+		//Puts the new hidden layer values into "New"
+		New.push(act);
+		
+	}
+	
+	return New;
+	
+}
+
+//This is a very stupid name for a function but I does what it says! Mainly, this grabs specific values from a huge list and puts it in a smaller list. One item in a list might have multiple values like, Layer: 1, Value: 400. This function grabs its values based on the "Layer" component. So if a value has layer 1 and I was looking for a value with layer 1. It would grab it and place it in its smaller list.
+function GetThing(Layer, List) {
+	
+	var things = [];
+	
+	for (i23 = 0; i23 < List.length; i23++) {
+		
+		if (List[i23].layers === Layer) {
+			things.push(List[i23].save);
+		}
+	}
+	return things;
+}
+
+
+//Real data! This data is used to train the discriminator on the real values. Funny story, when I was debugging this code, I put in some fake values like "good", "chicken", and "epic". I thought that was pretty funny. Do I just have a weird sense of humor? I don't know.
+
+
+//The learning rate or step rate for the Neural Network
+var Lr = 0.001;
+
+//This holds the values of the new weights generated in the network. 
+var NewWeights = [];
+
+//This holds the values of the new biases generated in the network. 
+var NewBias = [];
+
+var GenerationValues = [];
+
+var batchsize = 10;
+
+//The main training function of the Neural Network. This is activated by the Interval in the "valueChange" function.
+function Train() {
+
+	
+	//Adds 1 to the iteration counter
+	count++;
+	
+	//Clears the RandomNoise list
+	RandomNoise = [];
+	
+	//Finds the value with iterations in it and changes it to the iteration value.
+	document.getElementById("it").value = count;
+	
+	//batchsize for the both the discriminator and generator
+
+	
+	
+	
+	
+	
+	//Discriminator Train
+	var Costs = [];
+	
+	
+	//Clears the values in the NewWeights list and the NewBias List
+    NewWeights = [];
+	NewBias = [];
+	
+	
+	
+	
+	//Repeats for each batchsize
+	for (i = 0; i < batchsize; i++) {
+		
+		
+		
+		//If Number in Batchsize is even, then it is a real variable.
+		if (i % 2 === 0) {
+			
+			//Clears the values in the RandomNoise list and the GenOutput List
+			RandomNoise = [];
+			GenOutput = [];
+			
+			//Chooses a random value from "RealData" to put the the descriminator
+			var index = Math.floor(Math.random() * RealData.length);
+			
+			//The word choosen randomly from the "RealData" list
+			var Word = RealData[index];
+		
+			//This converts "Word" into a 270 vector. There are 10 sets, each one for character in the "Word". It then finds the placement of the word in the alphabet. If the character does not correspond to the one of the 27 characters (1 extra for periods or something), then they put a zero. If the number corresponds, then you put a one. I know that's confusing so here's an example. If the letter was "C" then the corresponding list would be, 0,0,1,0,0,0,0... because "C" is the third letter in the alphabet. Then you would do this to all other letters in the word and you would place them ontop of each other. 
+			for (r = 0; r < 10; r++) {
+				
+				var In = 50;
+				
+				//Gets the value of the letter in the alphabet
+				if (r < Word.length) {
+					
+					//97 is specific because 'a' on ASCII starts at 97
+					In = Word[r].charCodeAt(0) - 97;
+					
+				}
+				
+				
+				
+				//Puts in the zeros in the list.
+				for (r2 = 0; r2 < 27; r2++) {
+					
+					var save = (Math.random() * 0.2);
+					
+					if (r2 === In) {
+						save = (Math.random() * 0.2) + .8;
+					}
+					
+					var layers = 0;
+					
+					
+					
+					GenOutput.push({save, layers});
+					
+				}
+				
+				
+				
+			}
+			
+			
+			//ForwardWeightPass for Discriminator
+			WeightForwardPassDis();
+			
+			
+			
+			//backpropigation
+			
+			var out = GenOutput[GenOutput.length - 1].save;
+			
+			
+			
+			//1 == Real, -1 == Fake
+			
+			var Cost = [(2 * (out - (1))) * (1 - Math.pow(out, 2))];
+			
+			for (i5 = disNeuronSetup.length - 2; i5 > -1; i5 -= 1) {
+				
+				
+				var b2 = BackpropigationBias(Cost, i5, BiasDis, GenOutput, i);
+				
+				for (e = 0; e < b2.length; e++) {
+					
+					
+					save = b2[e].save;
+					
+					layers = b2[e].layers;
+					
+					
+					NewBias.push({save, layers});
+					
+				}
+				
+				var b3 = BackpropigationWeight(Cost, i5, WeightDis, GenOutput, i);
+				
+				for (e = 0; e < b3.length; e++) {
+					
+					
+					save = b3[e].save;
+					
+					layers = b3[e].layers;
+					
+					
+					NewWeights.push({save, layers});
+					
+				}
+				
+				Cost = BackpropigationError(Cost, i5, WeightDis, GenOutput);
+				
+				
+				
+				
+			}
+			
+			
+		
+			
+			var cost = Math.pow(out - (1), 2);
+			
+			Costs.push(cost)
+			
+			
+			//Backpropigation
+			
+			
+			
+			
+		}
+		
+		//If the Number in the Batchsize is odd, then it is from the generator.
+		else {
+			
+			//forward pass
+			RandomNoise = [];
+			GenOutput = [];
+			
+			
+			var valuesGen = GetThing(i, GenerationValues);
+			
+			for (h3 = 0; h3 < valuesGen.length; h3++) {
+				
+				var save = valuesGen[h3];
+				var layers = 0;
+				
+				RandomNoise.push({save, layers});
+				
+				
+			}
+			
+			
+			
+			
+			
+			WeightForwardPassGen();
+			
+			WeightForwardPassDis();
+			
+			
+			
+			var out = GenOutput[GenOutput.length - 1].save;
+			
+			
+			
+			//1 == Real, -1 == Fake
+			
+			var Cost = [(2 * (out - (-1))) * (1 - Math.pow(out, 2))];
+			
+			for (i5 = disNeuronSetup.length - 2; i5 > -1; i5 -= 1) {
+				
+				
+				var b2 = BackpropigationBias(Cost, i5, BiasDis, GenOutput, i);
+				
+				for (e = 0; e < b2.length; e++) {
+					
+					
+					save = b2[e].save;
+					
+					layers = b2[e].layers;
+					
+					
+					NewBias.push({save, layers});
+					
+				}
+				
+				var b3 = BackpropigationWeight(Cost, i5, WeightDis, GenOutput, i);
+				
+				for (e = 0; e < b3.length; e++) {
+					
+					
+					save = b3[e].save;
+					
+					layers = b3[e].layers;
+					
+					
+					NewWeights.push({save, layers});
+					
+				}
+				
+				Cost = BackpropigationError(Cost, i5, WeightDis, GenOutput);
+				
+				
+				
+				
+			}
+			
+			
+			var cost = Math.pow(out - (-1), 2);
+			
+			Costs.push(cost);
+			
+			
+		}
+		
+	}
+	
+	WeightDis = [];
+	BiasDis = [];
+	
+	for (i = 0; i < disNeuronSetup.length - 1; i++) {
+		
+		
+		var allValues =  GetThing(i, NewWeights);
+		
+		for (r = 0; r < disNeuronSetup[i] * disNeuronSetup[i + 1]; r++) {
+
+			var track = r;
+			var added = 0;
+			for (r3 = 0; r3 < batchsize; r3++) {
+
+				added += allValues[track];
+				
+				track += disNeuronSetup[i] * disNeuronSetup[i + 1];
+			
+			}
+			
+		
+			
+			var layers = i;
+			var save = added / batchsize;
+		
+			WeightDis.push({layers, save});
+			
+		}
+		
+		
+		
+	}
+	
+	for (i = 0; i < disNeuronSetup.length - 1; i++) {
+		
+		
+		var allValues =  GetThing(i, NewBias);
+		
+		for (r = 0; r < disNeuronSetup[i + 1]; r++) {
+
+			var track = r;
+			var added = 0;
+			for (r3 = 0; r3 < batchsize; r3++) {
+
+				added += allValues[track];
+				
+				track += disNeuronSetup[i + 1];
+			
+			}
+			
+		
+			
+			var layers = i;
+			var save = added / batchsize;
+		
+			BiasDis.push({layers, save});
+			
+		} 
+		
+	}
+	
+	//Display Cost
+	
+	var add = 0;
+	for (i = 0; i < Costs.length; i++) {
+		add += Costs[i];
+	}
+	
+	
+	
+	document.getElementById("Loss").value = add / batchsize;
+	
+	//Generator BackProp
+	NewBias = [];
+	NewWeights = [];
+	
+	Costs = [];
+	
+	for (i = 0; i < batchsize; i++) {
+		
+		//forward pass
+			RandomNoise = [];
+			GenOutput = [];
+			
+			
+			
+			
+			
+			
+			
+			
+			var valuesGen = GetThing(i, GenerationValues);
+			
+			for (h3 = 0; h3 < valuesGen.length; h3++) {
+				
+				var save = valuesGen[h3];
+				var layers = 0;
+				
+				RandomNoise.push({save, layers});
+				
+				
+			}
+			
+			
+			WeightForwardPassGen();
+			
+			WeightForwardPassDis();
+			
+			
+			
+			
+			var out = GenOutput[GenOutput.length - 1].save;
+			
+			
+			
+			//1 == Real, -1 == Fake
+			
+			var Cost = [(2 * (out - (1))) * (1 - Math.pow(out, 2))];
+		
+		
+			Costs.push(Math.pow(out - 1, 2));
+			for (i5 = disNeuronSetup.length - 2; i5 > -1; i5 -= 1) { 
+				
+				
+				Cost = BackpropigationError(Cost, i5, WeightDis, GenOutput);
+				
+				
+			}
+		
+		 	for (i5 = genNeuronSetup.length - 2; i5 > -1; i5 -= 1) {
+				
+				
+				var b2 = BackpropigationBias(Cost, i5, BiasGen, RandomNoise, i);
+				
+				for (e = 0; e < b2.length; e++) {
+					
+					
+					save = b2[e].save;
+					
+					layers = b2[e].layers;
+					
+					
+					NewBias.push({save, layers});
+					
+				}
+				
+				var b3 = BackpropigationWeight(Cost, i5, WeightGen, RandomNoise, i);
+				
+				for (e = 0; e < b3.length; e++) {
+					
+					
+					save = b3[e].save;
+					
+					layers = b3[e].layers;
+					
+					
+					NewWeights.push({save, layers});
+					
+				}
+				
+				Cost = BackpropigationError(Cost, i5, WeightGen, RandomNoise);
+				
+				
+				
+				
+			}
+			
+			
+		
+	}
+	
+	WeightGen = [];
+	BiasGen = [];
+	
+	for (i = 0; i < genNeuronSetup.length - 1; i++) {
+		
+		
+		var allValues =  GetThing(i, NewWeights);
+		
+		for (r = 0; r < genNeuronSetup[i] * genNeuronSetup[i + 1]; r++) {
+
+			var track = r;
+			var added = 0;
+			for (r3 = 0; r3 < batchsize; r3++) {
+
+				added += allValues[track];
+				
+				track += genNeuronSetup[i] * genNeuronSetup[i + 1];
+			
+			}
+			
+		
+			
+			var layers = i;
+			var save = added / batchsize;
+		
+			WeightGen.push({layers, save});
+			
+		}
+		
+		
+		
+	}
+	
+	for (i = 0; i < genNeuronSetup.length - 1; i++) {
+		
+		
+		var allValues =  GetThing(i, NewBias);
+		
+		for (r = 0; r < genNeuronSetup[i + 1]; r++) {
+
+			var track = r;
+			var added = 0;
+			for (r3 = 0; r3 < batchsize; r3++) {
+
+				added += allValues[track];
+				
+				track += genNeuronSetup[i + 1];
+			
+			}
+			
+		
+			
+			var layers = i;
+			var save = added / batchsize;
+		
+			BiasGen.push({layers, save});
+			
+		} 
+		
+	}
+	
+	add = 0;
+	for (i = 0; i < Costs.length; i++) {
+		add += Costs[i];
+	}
+	
+	
+	
+	document.getElementById("Loss2").value = add / batchsize;
+	
+	var allO = GetThing(RandomNoise[RandomNoise.length - 1].layers, RandomNoise);
+	
+	var finishedString = "Word: ";
+	
+	for (r = 0; r < 10; r++) {
+				
+		var In = 50;
+		var Greatest = 0;
+		for (r2 = 0; r2 < 27; r2++) {
+					
+			if (allO[r2 * (r + 1)] > Greatest) {
+				
+				In = r2;
+				Greatest = allO[r2 * (r + 1)];
+				
+			}
+					
+			
+					
+		}
+		
+		if (In < 27) {
+			
+			var J = String.fromCharCode(In + 97);
+			finishedString = finishedString + "" + J;
+			
+		}
+		else {
+			finishedString = finishedString + " ";
+		}
+		
+				
+				
+				
+	}
+	
+	document.getElementById("Gen").value = finishedString;
+	
+	
+}
+
+var GenOutput = [];
+
+function WeightForwardPassGen() {
+	
+	GenOutput = [];
+	
+	var layer = 0;
+	
+	var actual = [];
+	for (i34 = 0; i34 < 3; i34++) {
+		
+		
+		
+		
+		actual = ForwardWeightPass(i34, WeightGen, BiasGen, genNeuronSetup, RandomNoise);
+		
+		
+		for (ii = 0; ii < actual.length; ii++) {
+			
+			
+			var layers = i34 + 1;
+			var save = actual[ii];
+			
+			RandomNoise.push({layers, save});
+		}
+		
+		
+		
+	}
+	
+	for (ii = 0; ii < actual.length; ii++) {
+			
+			
+			var layers = 0;
+			var save = actual[ii];
+			
+			GenOutput.push({layers, save});
+	}
+	
+	
+}
+
+function WeightForwardPassDis() {
+	
+	
+	var layer = 0;
+	
+	var actual = [];
+	for (i34 = 0; i34 < 3; i34++) {
+		
+		
+		
+		
+		actual = ForwardWeightPass(i34, WeightDis, BiasDis, disNeuronSetup, GenOutput);
+		
+		
+		for (ii = 0; ii < actual.length; ii++) {
+			
+			
+			var layers = i34 + 1;
+			var save = actual[ii];
+			
+			GenOutput.push({layers, save});
+		}
+		
+		
+		
+	}
+}
+
+
+</script>
+
+
+</body>
+</html>
+
+

@@ -1,0 +1,299 @@
+.blog-post-header2-wrapper {
+  display: contents;
+}
+ 
+.blog-post-header2-blog-post-header3 {
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+ 
+.blog-post-header2-max-width {
+  gap: var(--dl-space-space-fiveunits);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+ 
+.blog-post-header2-section-title {
+  align-items: flex-start;
+}
+ 
+.blog-post-header2-title {
+  align-items: flex-start;
+}
+ 
+.blog-post-header2-content1 {
+  gap: var(--dl-space-space-halfunit);
+  display: flex;
+  align-items: center;
+}
+ 
+.blog-post-header2-text1 {
+  text-decoration: none;
+}
+ 
+.blog-post-header2-content2 {
+  gap: var(--dl-space-space-oneandhalfunits);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+ 
+.blog-post-header2-text2 {
+  text-align: center;
+}
+ 
+.blog-post-header2-content3 {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+ 
+.blog-post-header2-author {
+  gap: var(--dl-space-space-halfunit);
+  border: 2px dashed rgba(120, 120, 120, 0.4);
+  display: flex;
+}
+ 
+.blog-post-header2-time {
+  gap: 8px;
+  display: flex;
+  align-items: center;
+}
+ 
+.blog-post-header2-social {
+  border: 2px dashed rgba(120, 120, 120, 0.4);
+}
+ 
+.blog-post-header2-container {
+  flex: 1;
+  height: 560px;
+  display: flex;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+}
+ 
+.blog-post-header2-image1 {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  flex-grow: 1;
+}
+ 
+.pneumatic-baseball-bat-fragment1 {
+  display: contents;
+}
+ 
+.pneumatic-baseball-bat-text10 {
+  display: inline-block;
+}
+ 
+.pneumatic-baseball-bat-fragment2 {
+  display: contents;
+}
+ 
+.pneumatic-baseball-bat-text11 {
+  display: inline-block;
+}
+ 
+.pneumatic-baseball-bat-fragment3 {
+  display: contents;
+}
+ 
+.pneumatic-baseball-bat-text12 {
+  display: inline-block;
+}
+ 
+@media(max-width: 767px) {
+  .blog-post-header2-max-width {
+    flex-direction: column;
+  }
+  .blog-post-header2-section-title {
+    align-items: center;
+  }
+  .blog-post-header2-title {
+    align-items: center;
+  }
+  .blog-post-header2-content2 {
+    align-items: center;
+  }
+  .blog-post-header2-content3 {
+    align-items: center;
+  }
+  .blog-post-header2-container {
+    width: 100%;
+  }
+}
+ 
+@media(max-width: 479px) {
+  .blog-post-header2-max-width {
+    gap: var(--dl-space-space-oneandhalfunits);
+  }
+}
+
+.content-list11-wrapper {
+  display: contents;
+}
+ 
+.content-list11-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+}
+ 
+.content-list11-max-width {
+  width: 100%;
+  display: flex;
+  max-width: var(--dl-size-size-maxwidth);
+  align-items: center;
+  flex-direction: column;
+}
+ 
+.content-list11-content {
+  align-self: stretch;
+  align-items: flex-start;
+}
+ 
+.content-list11-ul {
+  align-items: flex-start;
+}
+ 
+.content-list11-heading1 {
+  align-self: flex-start;
+}
+ 
+.content-list11-image1 {
+  width: 495px;
+  height: 268px;
+  object-fit: cover;
+}
+ 
+.content-list11-image2 {
+  width: 515px;
+  height: 250px;
+  object-fit: cover;
+}
+ 
+.content-list11-video {
+  width: 320px;
+  height: 180px;
+}
+ 
+.pneumatic-baseball-bat-fragment4 {
+  display: contents;
+}
+ 
+.pneumatic-baseball-bat-text13 {
+  display: inline-block;
+}
+ 
+.pneumatic-baseball-bat-fragment5 {
+  display: contents;
+}
+ 
+.pneumatic-baseball-bat-text14 {
+  display: inline-block;
+}
+ 
+.pneumatic-baseball-bat-fragment6 {
+  display: contents;
+}
+ 
+.pneumatic-baseball-bat-text17 {
+  display: inline-block;
+}
+ 
+.pneumatic-baseball-bat-fragment7 {
+  display: contents;
+}
+ 
+.pneumatic-baseball-bat-text18 {
+  display: inline-block;
+}
+ 
+.pneumatic-baseball-bat-fragment8 {
+  display: contents;
+}
+ 
+.pneumatic-baseball-bat-text19 {
+  display: inline-block;
+}
+
+.pneumatic-baseball-bat-container {
+  width: 100%;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+ 
+.pneumatic-baseball-bat-fragment1 {
+  display: contents;
+}
+ 
+.pneumatic-baseball-bat-text10 {
+  display: inline-block;
+}
+ 
+.pneumatic-baseball-bat-fragment2 {
+  display: contents;
+}
+ 
+.pneumatic-baseball-bat-text11 {
+  display: inline-block;
+}
+ 
+.pneumatic-baseball-bat-fragment3 {
+  display: contents;
+}
+ 
+.pneumatic-baseball-bat-text12 {
+  display: inline-block;
+}
+ 
+.pneumatic-baseball-bat-fragment4 {
+  display: contents;
+}
+ 
+.pneumatic-baseball-bat-text13 {
+  display: inline-block;
+}
+ 
+.pneumatic-baseball-bat-fragment5 {
+  display: contents;
+}
+ 
+.pneumatic-baseball-bat-text14 {
+  display: inline-block;
+}
+ 
+.pneumatic-baseball-bat-fragment6 {
+  display: contents;
+}
+ 
+.pneumatic-baseball-bat-text17 {
+  display: inline-block;
+}
+ 
+.pneumatic-baseball-bat-fragment7 {
+  display: contents;
+}
+ 
+.pneumatic-baseball-bat-text18 {
+  display: inline-block;
+}
+ 
+.pneumatic-baseball-bat-fragment8 {
+  display: contents;
+}
+ 
+.pneumatic-baseball-bat-text19 {
+  display: inline-block;
+}

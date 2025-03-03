@@ -1,600 +1,518 @@
-<!doctype html>
-<html>
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>The Alex Carroll</title>
-	<!-- Please use an inliner tool to convert all CSS to inline as inpage or external CSS is removed by email clients --><!-- important in CSS is used to prevent the styles of currently inline CSS from overriding the ones mentioned in media queries when corresponding screen sizes are encountered -->
-	<style type="text/css">body {
-	margin: 0;
-}
-body, table, td, p, a, li, blockquote {
-	-webkit-text-size-adjust: none!important;
-	font-family: sans-serif;
-	font-style: normal;
-	font-weight: 400;
-}
-button {
-	width: 90%;
-}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>The Alex Carroll</title>
+    <meta property="og:title" content="Simplistic Limp Gerbil" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
 
-@media screen and (max-width:600px) {
-/*styling for objects with screen size less than 600px; */
-body, table, td, p, a, li, blockquote {
-	-webkit-text-size-adjust: none!important;
-	font-family: sans-serif;
-}
-table {
-	/* All tables are 100% width */
-	width: 100%;
-}
-.footer {
-	/* Footer has 2 columns each of 48% width */
-	height: auto !important;
-	max-width: 48% !important;
-	width: 48% !important;
-}
-table.responsiveImage {
-	/* Container for images in catalog */
-	height: auto !important;
-	max-width: 30% !important;
-	width: 30% !important;
-}
-table.responsiveContent {
-	/* Content that accompanies the content in the catalog */
-	height: auto !important;
-	max-width: 66% !important;
-	width: 66% !important;
-}
-.top {
-	/* Each Columnar table in the header */
-	height: auto !important;
-	max-width: 48% !important;
-	width: 48% !important;
-}
-.catalog {
-	margin-left: 0%!important;
-}
-}
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;  -webkit-font-smoothing: antialiased;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;  color: inherit;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}details {  display: block;  margin: 0;  padding: 0;}summary::-webkit-details-marker {  display: none;}[data-thq="accordion"] [data-thq="accordion-content"] {  max-height: 0;  overflow: hidden;  transition: max-height 0.3s ease-in-out;  padding: 0;}[data-thq="accordion"] details[data-thq="accordion-trigger"][open] + [data-thq="accordion-content"] {  max-height: 1000vh;}details[data-thq="accordion-trigger"][open] summary [data-thq="accordion-icon"] {  transform: rotate(180deg);}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
 
-@media screen and (max-width:480px) {
-/*styling for objects with screen size less than 480px; */
-body, table, td, p, a, li, blockquote {
-	-webkit-text-size-adjust: none!important;
-	font-family: sans-serif;
-}
-table {
-	/* All tables are 100% width */
-	width: 100% !important;
-	border-style: none !important;
-}
-.footer {
-	/* Each footer column in this case should occupy 96% width  and 4% is allowed for email client padding*/
-	height: auto !important;
-	max-width: 96% !important;
-	width: 96% !important;
-}
-.table.responsiveImage {
-	/* Container for each image now specifying full width */
-	height: auto !important;
-	max-width: 96% !important;
-	width: 96% !important;
-}
-.table.responsiveContent {
-	/* Content in catalog  occupying full width of cell */
-	height: auto !important;
-	max-width: 96% !important;
-	width: 96% !important;
-}
-.top {
-	/* Header columns occupying full width */
-	height: auto !important;
-	max-width: 100% !important;
-	width: 100% !important;
-}
-.catalog {
-	margin-left: 0%!important;
-}
-button {
-	width: 90%!important;
-}
-}
-	</style>
-</head>
-<body yahoo="yahoo">
-<table cellpadding="0" cellspacing="0" width="100%">
-	<tbody>
-		<tr>
-			<td>
-			<table align="center" cellpadding="0" cellspacing="0" width="600"><!-- Main Wrapper Table with initial width set to 60opx -->
-				<tbody>
-					<tr>
-						<td>
-						<table align="left" bgcolor="#d0cfcf" cellpadding="0" cellspacing="0" class="top" style="padding:10px 10px 10px 10px;" width="48%"><!-- First header column with Logo -->
-							<tbody>
-								<tr>
-									<td style="text-align: center;"><a href="index.html" style="text-decoration:none; font-size: 12px; color:#929292; text-align: center; font-family: sans-serif;">Home!</a></td>
-								</tr>
-							</tbody>
-						</table>
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-theme-neutral-dark);
+        background: var(--dl-color-theme-neutral-light);
 
-						<table align="left" bgcolor="#d0cfcf" cellpadding="0" cellspacing="0" class="top" style="padding:10px 10px 10px 10px; text-align:left" width="48%"><!-- Second header column with ISSUE|DATE -->
-							<tbody>
-								<tr>
-									<td style="text-align: center;"><a href="about.html" style="text-decoration:none; font-size: 12px; color:#929292; text-align: left; font-family: sans-serif;">About</a></td>
-								</tr>
-							</tbody>
-						</table>
-						</td>
-					</tr>
-					<tr><!-- HTML Spacer row -->
-						<td height="20" style="font-size: 0; line-height: 0;">
-						<table align="left" cellpadding="0" cellspacing="0" width="96%">
-							<tbody>
-								<tr>
-									<td height="20" style="font-size: 0; line-height: 0;"></td>
-								</tr>
-							</tbody>
-						</table>
-						</td>
-					</tr>
-					<tr><!-- HTML IMAGE SPACER -->
-						<td height="20" style="font-size: 0; line-height: 0;">
-						<table align="left" cellpadding="0" cellspacing="0">
-							<tbody>
-								<tr>
-									<td></td>
-								</tr>
-							</tbody>
-						</table>
-						</td>
-					</tr>
-					<tr><!-- Introduction area -->
-						<td>
-						<table align="left" cellpadding="0" cellspacing="0" width="96%">
-							<tbody>
-								<tr><!--<img src="images/576x250.gif">
-				  </tr>
-                  <tr> 
-                    <!-- row container for TITLE/EMAIL THEME -->
-									<td align="Left" style="font-size: 32px; font-weight: 300; line-height: 2.5em; color: #929292; font-family: sans-serif;"><strong><em>THE</em></strong> Alex Carroll!</td>
-								</tr>
-								<tr><!-- row container for Tagline -->
-									<td align="Left" style="font-size: 16px; font-weight:1000; color: #929292; font-family: sans-serif;">&nbsp;About</td>
-								</tr>
-								<tr>
-									<td height="20" style="font-size: 0; line-height: 0;">
-									<table align="left" cellpadding="0" cellspacing="0" width="96%">
-										<tbody>
-											<tr><!-- HTML Spacer row -->
-												<td height="20" style="font-size: 0; line-height: 0;"></td>
-											</tr>
-										</tbody>
-									</table>
-									</td>
-								</tr>
-								<tr><!-- Row container for Intro/ Description -->
-									<td align="left" style="font-size: 14px; font-style: normal; font-weight: 100; color: #929292; line-height: 1.8; text-align:justify; padding:10px 20px 0px 20px; font-family: sans-serif;">Welcome and thank you for checking out my website! Feel free to click on any of my personal, non-school related projects or extracurriculars below and read up on them. Many of these projects are from my high school and college years. Some of them even have my code right into the website! If you want any clarification on anything, feel free to send me an email at <strong>alex@carrollconcertinas.com</strong></td>
-								</tr>
-							</tbody>
-						</table>
-						</td>
-					</tr>
-					<tr><!-- row container for Tagline -->
-						<td align="Left" style="padding:20px 0px 0px 5px; font-size: 16px; font-weight:1000; color: #929292; font-family: sans-serif;">Projects</td>
-					</tr>
-					<tr><!-- HTML Spacer row -->
-						<td height="10" style="font-size: 0; line-height: 0;">
-						<table align="left" cellpadding="0" cellspacing="0" width="96%">
-							<tbody>
-								<tr>
-									<td height="20" style="font-size: 0; line-height: 0;"></td>
-								</tr>
-							</tbody>
-						</table>
-						</td>
-					</tr>
-					<tr>
-						<td>
-						<table align="center" cellpadding="0" cellspacing="0" class="catalog" style="margin-left:5%" width="100%"><!-- Table for catalog -->
-							<tbody>
-								<tr>
-									<td>
-									<table align="left" cellpadding="0" cellspacing="0" class="responsive-table" style="margin: 10px 0px 10px 0px;" width="48%"><!-- Table container for each image and description in catalog -->
-										<tbody>
-											<tr>
-												<td>
-												<table align="left" cellpadding="20px" cellspacing="0" class="table.responsiveImage" width="66%"><!-- Table container for image -->
-													<tbody>
-														<tr>
-															<td align="center" style="padding:5px 10px 10px 3px;"><img alt="sample" src="images/MotionCapture.png" style="width: 240px;" width="92" /></td>
-														</tr>
-													</tbody>
-												</table>
+        fill: var(--dl-color-theme-neutral-dark);
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/animate.css@4.1.1/animate.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
+    />
+  </head>
+  <body>
+    <link rel="stylesheet" href="./style.css" />
+    <div>
+      <link href="./index.css" rel="stylesheet" />
 
-												<table align="left" cellpadding="0" cellspacing="0" class="table.responsiveContent" width="90%"><!-- Table container for content -->
-													<tbody>
-														<tr>
-															<td>
-															<p style="font-size: 18px; font-style: normal; font-weight: normal; color: #929292;  padding: 5px 0px 0px 10px;line-height: 1.5em; font-family: sans-serif;"><strong>Motion Capturing Software</strong></p>
-
-															<p style="background-color:#AAAAAA; text-align:center; padding: 10px 10px 10px 10px; margin: 10px 10px 10px 10px;color: #FFFFFF;   font-family: sans-serif; "><a href="Motion_Capture.html" style="text-decoration:none">Read More</a></p>
-															</td>
-														</tr>
-													</tbody>
-												</table>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-
-									<table align="left" cellpadding="0" cellspacing="0" class="responsive-table" style="margin: 10px 0px 10px 0px;" width="48%"><!-- Table container for each image and description in catalog -->
-										<tbody>
-											<tr>
-												<td>
-												<table align="left" cellpadding="0" cellspacing="0" class="table.responsiveImage" width="66%"><!-- Table container for image -->
-													<tbody>
-														<tr>
-															<td align="center" style="padding:5px 3px 10px 3px;"><img alt="sample" src="images/AutoAnimate.png" style="width: 240px;" /></td>
-														</tr>
-													</tbody>
-												</table>
-
-												<table align="left" cellpadding="0" cellspacing="0" class="table.responsiveContent" width="90%"><!-- Table container for content -->
-													<tbody>
-														<tr>
-															<td>
-															<p style="font-size: 18px; font-style: normal; font-weight: normal; color: #929292;  padding: 5px 0px 0px 10px;line-height: 1.5em; font-family: sans-serif;"><strong>Auto Lip Syncing For an Animated Character with Machine Learning &nbsp;</strong></p>
-
-															<p style="background-color:#AAAAAA; text-align:center; padding: 10px 10px 10px 10px; margin: 10px 10px 10px 10px;color: #FFFFFF;   font-family: sans-serif; "><a href="Auto_Lip_Syncing_with_Machine_Learning.html" style="text-decoration:none">Read More</a></p>
-															</td>
-														</tr>
-													</tbody>
-												</table>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-									</td>
-								</tr>
-								<tr>
-									<td>
-									<table align="left" cellpadding="0" cellspacing="0" class="responsive-table" style="margin: 10px 0px 10px 0px;" width="48%"><!-- Table container for each image and description in catalog -->
-										<tbody>
-											<tr>
-												<td>
-												<table align="left" cellpadding="0" cellspacing="0" class="table.responsiveImage" width="66%"><!-- Table container for image -->
-													<tbody>
-														<tr>
-															<td align="center" style="padding:5px 10px 10px 3px;"><img alt="sample" src="images/Gas.png" style="width: 240px;" /></td>
-														</tr>
-													</tbody>
-												</table>
-
-												<table align="left" cellpadding="0" cellspacing="0" class="table.responsiveContent" width="90%"><!-- Table container for content -->
-													<tbody>
-														<tr>
-															<td>
-															<p style="font-size: 18px; font-style: normal; font-weight: normal; color: #929292;  padding: 5px 0px 0px 10px;line-height: 1.5em; font-family: sans-serif;"><strong>Gas Simulator </strong></p>
-
-															<p style="background-color:#AAAAAA; text-align:center; padding: 10px 10px 10px 10px; margin: 10px 10px 10px 10px;color: #FFFFFF;   font-family: sans-serif;"><a href="Gas_Simulator.html" style="text-decoration:none">Read More</a></p>
-															</td>
-														</tr>
-													</tbody>
-												</table>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-
-									<table align="left" cellpadding="0" cellspacing="0" class="responsive-table" style="margin: 10px 0px 10px 0px;" width="48%"><!-- Table container for each image and description in catalog -->
-										<tbody>
-											<tr>
-												<td>
-												<table align="left" cellpadding="0" cellspacing="0" class="table.responsiveImage" width="66%"><!-- Table container for image -->
-													<tbody>
-														<tr>
-															<td align="center" style="padding:5px 3px 10px 3px;"><img alt="sample" src="images/Baseball.png" style="width: 240px;" /></td>
-														</tr>
-													</tbody>
-												</table>
-
-												<table align="left" cellpadding="0" cellspacing="0" class="table.responsiveContent" width="90%"><!-- Table container for content -->
-													<tbody>
-														<tr>
-															<td>
-															<p style="font-size: 18px; font-style: normal; font-weight: normal; color: #929292;  padding: 5px 0px 0px 10px;line-height: 1.5em; font-family: sans-serif;"><strong>Pneumatic Cannon Baseball Bat</strong></p>
-
-															<p style="background-color:#AAAAAA; text-align:center; padding: 10px 10px 10px 10px; margin: 10px 10px 10px 10px;color: #FFFFFF;   font-family: sans-serif;"><a href="Pneumatic_Baseball_Bat.html" style="text-decoration:none">Read More</a></p>
-															</td>
-														</tr>
-													</tbody>
-												</table>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-									</td>
-								</tr>
-							</tbody>
-						</table>
-						</td>
-					</tr>
-					<tr>
-						<td>
-						<table align="center" cellpadding="0" cellspacing="0" class="catalog" style="margin-left:5%" width="100%"><!-- Table for catalog -->
-							<tbody>
-								<tr>
-									<td>
-									<table align="left" cellpadding="0px" cellspacing="0" class="responsive-table" style="margin: 10px 0px 10px 0px;" width="48%"><!-- Table container for each image and description in catalog -->
-										<tbody>
-											<tr>
-												<td>
-												<table align="left" cellpadding="20px" cellspacing="0" class="table.responsiveImage" width="66%"><!-- Table container for image -->
-													<tbody>
-														<tr>
-															<td align="center" style="padding:10px 10px 0px 3px;"><img alt="sample" src="images/1v1Capture.png" style="width: 240px;" width="92" /></td>
-														</tr>
-													</tbody>
-												</table>
-
-												<table align="left" cellpadding="0" cellspacing="0" class="table.responsiveContent" width="90%"><!-- Table container for content -->
-													<tbody>
-														<tr>
-															<td>
-															<p style="font-size: 18px; font-style: normal; font-weight: normal; color: #929292;  padding: 5px 0px 0px 10px;line-height: 1.5em; font-family: sans-serif;"><strong>Computer Plays Capture the Flag with Evolution</strong></p>
-
-															<p style="background-color:#AAAAAA; text-align:center; padding: 10px 10px 10px 10px; margin: 10px 10px 10px 10px;color: #FFFFFF;   font-family: sans-serif; "><a href="1v1_Capture_The_Flag_With_Basic_Evolution.html" style="text-decoration:none">Read More</a></p>
-															</td>
-														</tr>
-													</tbody>
-												</table>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-
-									<table align="left" cellpadding="0" cellspacing="0" class="responsive-table" style="margin: 10px 0px 10px 0px;" width="48%"><!-- Table container for each image and description in catalog -->
-										<tbody>
-											<tr>
-												<td>
-												<table align="left" cellpadding="0" cellspacing="0" class="table.responsiveImage" width="66%"><!-- Table container for image -->
-													<tbody>
-														<tr>
-															<td align="center" style="padding:10px 3px 10px 3px;"><img alt="sample" src="images/Face.png" style="width: 240px;" /></td>
-														</tr>
-													</tbody>
-												</table>
-
-												<table align="left" cellpadding="0" cellspacing="0" class="table.responsiveContent" width="90%"><!-- Table container for content -->
-													<tbody>
-														<tr>
-															<td>
-															<p style="font-size: 18px; font-style: normal; font-weight: normal; color: #929292;  padding: 5px 0px 0px 10px;line-height: 1.5em; font-family: sans-serif;"><strong>Creating My Face with Machine Learning&nbsp;</strong></p>
-
-															<p style="background-color:#AAAAAA; text-align:center; padding: 10px 10px 10px 10px; margin: 10px 10px 10px 10px;color: #FFFFFF;   font-family: sans-serif; "><a href="Creating_My_Face_with_Machine_Learning.html" style="text-decoration:none">Read More</a></p>
-															</td>
-														</tr>
-													</tbody>
-												</table>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-									</td>
-								</tr>
-								<tr><!-- HTML spacer row -->
-									<td height="20" style="font-size: 0; line-height: 0;">
-									<table align="left" cellpadding="0" cellspacing="0" width="96%">
-										<tbody>
-											<tr>
-												<td height="20" style="font-size: 0; line-height: 0;"></td>
-											</tr>
-										</tbody>
-									</table>
-									</td>
-								</tr>
-							</tbody>
-						</table>
-						</td>
-					</tr>
-					<tr>
-						<td>
-						<table align="center" cellpadding="0" cellspacing="0" class="catalog" style="margin-left:5%" width="100%"><!-- Table for catalog -->
-							<tbody>
-								<tr>
-									<td>
-									<table align="left" cellpadding="0" cellspacing="0" class="responsive-table" style="margin: 10px 0px 10px 0px;" width="48%"><!-- Table container for each image and description in catalog -->
-										<tbody>
-											<tr>
-												<td>
-												<table align="left" cellpadding="20px" cellspacing="0" class="table.responsiveImage" width="66%"><!-- Table container for image -->
-													<tbody>
-														<tr>
-															<td align="center" style="padding:10px 10px 10px 3px;"><img alt="sample" src="images/Wii.png" style="width: 240px;" width="92" /></td>
-														</tr>
-													</tbody>
-												</table>
-
-												<table align="left" cellpadding="0" cellspacing="0" class="table.responsiveContent" width="90%"><!-- Table container for content -->
-													<tbody>
-														<tr>
-															<td>
-															<p style="font-size: 18px; font-style: normal; font-weight: normal; color: #929292;  padding: 5px 0px 0px 10px;line-height: 1.5em; font-family: sans-serif;"><strong>Controlling a Wii Remote with an Arduino</strong></p>
-
-															<p style="background-color:#AAAAAA; text-align:center; padding: 10px 10px 10px 10px; margin: 10px 10px 10px 10px;color: #FFFFFF;   font-family: sans-serif; "><a href="Wii_Remote_Controller_Using_Arduino.html" style="text-decoration:none">Read More</a></p>
-															</td>
-														</tr>
-													</tbody>
-												</table>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-
-									<table align="left" cellpadding="0" cellspacing="0" class="responsive-table" style="margin: 10px 0px 10px 0px;" width="48%"><!-- Table container for each image and description in catalog -->
-										<tbody>
-											<tr>
-												<td>
-												<table align="left" cellpadding="0" cellspacing="0" class="table.responsiveImage" width="66%"><!-- Table container for image -->
-													<tbody>
-														<tr>
-															<td align="center" style="padding:10px 3px 10px 3px;"><img alt="sample" src="images/Audio.png" style="width: 240px;" /></td>
-														</tr>
-													</tbody>
-												</table>
-
-												<table align="left" cellpadding="0" cellspacing="0" class="table.responsiveContent" width="90%"><!-- Table container for content -->
-													<tbody>
-														<tr>
-															<td>
-															<p style="font-size: 18px; font-style: normal; font-weight: normal; color: #929292;  padding: 5px 0px 0px 10px;line-height: 1.5em; font-family: sans-serif;"><strong>Audio Experiments and Midi Files &nbsp;</strong></p>
-
-															<p style="background-color:#AAAAAA; text-align:center; padding: 10px 10px 10px 10px; margin: 10px 10px 10px 10px;color: #FFFFFF;   font-family: sans-serif; "><a href="Audio_Analysis_and_Image_Generation.html" style="text-decoration:none">Read More</a></p>
-															</td>
-														</tr>
-													</tbody>
-												</table>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-									</td>
-								</tr>
-							</tbody>
-						</table>
-						</td>
-					</tr>
-					<!-- SPLIT --><!-- SPLIT -->
-					<tr>
-						<td>
-						<table align="center" cellpadding="0" cellspacing="0" class="catalog" style="margin-left:5%" width="100%"><!-- Table for catalog -->
-							<tbody>
-								<tr>
-									<td>
-									<table align="left" cellpadding="0" cellspacing="0" class="responsive-table" style="margin: 10px 0px 10px 0px;" width="48%"><!-- Table container for each image and description in catalog -->
-										<tbody>
-											<tr>
-												<td>
-												<table align="left" cellpadding="20px" cellspacing="0" class="table.responsiveImage" width="66%"><!-- Table container for image -->
-													<tbody>
-														<tr>
-															<td align="center" style="padding:10px 10px 10px 3px;"><img alt="sample" src="images/band.png" style="width: 240px;" width="92" /></td>
-														</tr>
-													</tbody>
-												</table>
-
-												<table align="left" cellpadding="0" cellspacing="0" class="table.responsiveContent" width="90%"><!-- Table container for content -->
-													<tbody>
-														<tr>
-															<td>
-															<p style="font-size: 18px; font-style: normal; font-weight: normal; color: #929292;  padding: 5px 0px 0px 10px;line-height: 1.5em; font-family: sans-serif;"><strong>My Band Cut In The Hill </strong></p>
-
-															<p style="background-color:#AAAAAA; text-align:center; padding: 10px 10px 10px 10px; margin: 10px 10px 10px 10px;color: #FFFFFF;   font-family: sans-serif; "><a href="My_Band_Cut_In_The_Hill.html" style="text-decoration:none">Read More</a></p>
-															</td>
-														</tr>
-													</tbody>
-												</table>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-
-									<table align="left" cellpadding="0" cellspacing="0" class="responsive-table" style="margin: 10px 0px 10px 0px;" width="48%"><!-- Table container for each image and description in catalog -->
-										<tbody>
-											<tr>
-												<td>
-												<table align="left" cellpadding="0" cellspacing="0" class="table.responsiveImage" width="66%"><!-- Table container for image -->
-													<tbody>
-														<tr>
-															<td align="center" style="padding:10px 3px 10px 3px;"><img alt="sample" src="images/Plane.png" style="width: 240px;" /></td>
-														</tr>
-													</tbody>
-												</table>
-
-												<table align="left" cellpadding="0" cellspacing="0" class="table.responsiveContent" width="90%"><!-- Table container for content -->
-													<tbody>
-														<tr>
-															<td>
-															<p style="font-size: 18px; font-style: normal; font-weight: normal; color: #929292;  padding: 5px 0px 0px 10px;line-height: 1.5em; font-family: sans-serif;"><strong>Pilots License &nbsp;</strong></p>
-
-															<p style="background-color:#AAAAAA; text-align:center; padding: 10px 10px 10px 10px; margin: 10px 10px 10px 10px;color: #FFFFFF;   font-family: sans-serif; "><a href="Pilots_License.html" style="text-decoration:none">Read More</a></p>
-															</td>
-														</tr>
-													</tbody>
-												</table>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-									</td>
-								</tr>
-								<tr>
-									<td>
-									<table align="left" cellpadding="0" cellspacing="0" class="responsive-table" style="margin: 10px 0px 10px 0px;" width="48%"><!-- Table container for each image and description in catalog -->
-										<tbody>
-											<tr>
-												<td>
-												<table align="left" cellpadding="0" cellspacing="0" class="table.responsiveImage" width="66%"><!-- Table container for image -->
-													<tbody>
-														<tr>
-															<td align="center" style="padding:10px 3px 10px 3px;"><img alt="sample" src="images/WordAssociations.png" style="width: 240px;" /></td>
-														</tr>
-													</tbody>
-												</table>
-
-												<table align="left" cellpadding="0" cellspacing="0" class="table.responsiveContent" width="90%"><!-- Table container for content -->
-													<tbody>
-														<tr>
-															<td>
-															<p style="font-size: 18px; font-style: normal; font-weight: normal; color: #929292;  padding: 5px 0px 0px 10px;line-height: 1.5em; font-family: sans-serif;"><strong>Word Associations Using Machine Learning</strong></p>
-
-															<p style="background-color:#AAAAAA; text-align:center; padding: 10px 10px 10px 10px; margin: 10px 10px 10px 10px;color: #FFFFFF;   font-family: sans-serif;"><a href="Word_Associations_with_Machine_Learning.html" style="text-decoration:none">Read More</a></p>
-															</td>
-														</tr>
-													</tbody>
-												</table>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-
-									<table align="left" cellpadding="0" cellspacing="0" class="responsive-table" style="margin: 10px 0px 10px 0px;" width="48%"><!-- Table container for each image and description in catalog -->
-										<tbody>
-											<tr>
-												<td>
-												<table align="left" cellpadding="0" cellspacing="0" class="table.responsiveImage" width="66%"><!-- Table container for image -->
-													<tbody>
-														<tr>
-															<td align="center" style="padding:10px 3px 10px 3px;"><img alt="sample" src="images/Words.png" style="width: 240px;" /></td>
-														</tr>
-													</tbody>
-												</table>
-
-												<table align="left" cellpadding="0" cellspacing="0" class="table.responsiveContent" width="90%"><!-- Table container for content -->
-													<tbody>
-														<tr>
-															<td>
-															<p style="font-size: 18px; font-style: normal; font-weight: normal; color: #929292;  padding: 5px 0px 0px 10px;line-height: 1.5em; font-family: sans-serif;"><strong>Generating New Words Using Machine Learning</strong></p>
-
-															<p style="background-color:#AAAAAA; text-align:center; padding: 10px 10px 10px 10px; margin: 10px 10px 10px 10px;color: #FFFFFF;   font-family: sans-serif;"><a href="Creating_New_Words_using_Machine_Learning.html" style="text-decoration:none">Read More</a></p>
-															</td>
-														</tr>
-													</tbody>
-												</table>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-									</td>
-								</tr>
-							</tbody>
-						</table>
-						</td>
-					</tr>
-				</tbody>
-			</table>
-			</td>
-		</tr>
-	</tbody>
-</table>
-</body>
+      <div class="home-container">
+        <banner1-wrapper
+          class="banner1-wrapper"
+          rootclassname="banner1undefined"
+        >
+          <!--Banner1 component-->
+          <div
+            class="banner1-container1 thq-section-padding banner1root-class-name"
+          >
+            <div class="banner1-max-width thq-section-max-width">
+              <div class="banner1-container2">
+                <h2 class="banner1-title thq-heading-2">
+                  <fragment class="home-fragment3">
+                    <span class="home-text3">
+                      Welcome to The Alex Carroll!!
+                    </span>
+                  </fragment>
+                </h2>
+                <h3 class="banner1-text1 thq-heading-3">
+                  <fragment class="home-fragment2">
+                    <span class="home-text2">
+                      This is my portfolio website!
+                    </span>
+                  </fragment>
+                </h3>
+              </div>
+            </div>
+          </div>
+        </banner1-wrapper>
+        <div class="home-layout3011 thq-section-padding">
+          <div class="home-max-width1 thq-section-max-width">
+            <div class="home-row1 thq-grid-auto-300">
+              <div class="home-feature11">
+                <img
+                  alt="image1"
+                  src="public/baseball%20bat-600w.png"
+                  class="thq-img-ratio-4-3"
+                />
+                <div class="home-content10 thq-flex-column">
+                  <div class="home-section-title10 thq-flex-column">
+                    <h3 class="home-title11 thq-heading-3">
+                      Pneumatic Baseball Bat
+                    </h3>
+                  </div>
+                  <span class="home-description11 thq-body-small">
+                    Using 175psi of pressure, I was able to hit a baseball over
+                    265 ft!
+                  </span>
+                  <div class="home-action10 thq-flex-row">
+                    <a
+                      href="pneumatic-baseball-bat.html"
+                      class="home-button10 thq-button-flat"
+                    >
+                      <span class="thq-body-small">Learn More</span>
+                      <svg viewBox="0 0 1024 1024" class="thq-icon-small">
+                        <path
+                          d="M426 256l256 256-256 256-60-60 196-196-196-196z"
+                        ></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="home-feature21">
+                <img
+                  alt="image2"
+                  src="public/face-600w.png"
+                  class="thq-img-ratio-4-3"
+                />
+                <div class="home-content11 thq-flex-column">
+                  <div class="home-section-title11 thq-flex-column">
+                    <strong class="home-title21 thq-heading-3">
+                      Machine learning with my Face
+                    </strong>
+                    <span class="home-description21 thq-body-small">
+                      Using TensorFlow and an analysis technique called PCA, I
+                      was able to generate custom manipulated faces&nbsp;
+                    </span>
+                  </div>
+                  <div class="home-action12 thq-flex-row">
+                    <button class="thq-button-flat">
+                      <a
+                        href="creating-my-face-with-machine-learning.html"
+                        class="home-action21 thq-body-small"
+                      >
+                        Learn More
+                      </a>
+                      <svg viewBox="0 0 1024 1024" class="thq-icon-small">
+                        <path
+                          d="M426 256l256 256-256 256-60-60 196-196-196-196z"
+                        ></path>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="home-feature31">
+                <img
+                  alt="PlaceholderImage1314"
+                  src="public/screenshot%202025-02-22%20003108-600w.png"
+                  class="thq-img-ratio-4-3"
+                />
+                <div class="home-content12 thq-flex-column">
+                  <div class="home-section-title12 thq-flex-column">
+                    <strong class="home-title31 thq-heading-3">
+                      CFD Analysis on a Concrete Coupling Clamp
+                    </strong>
+                    <span class="home-description31 thq-body-small">
+                      Analyzing a video of a clamp from Instagram and performing
+                      a CFD, I was able to evaluate how important air resistance
+                      was to calculating it's fall height.
+                    </span>
+                  </div>
+                  <div class="home-action13 thq-flex-row">
+                    <button class="thq-button-flat">
+                      <a
+                      href="cfd-of-a-clamp.html"
+                       class="home-action21 thq-body-small"
+                     >
+                     Learn More
+                   </a>
+                      <svg viewBox="0 0 1024 1024" class="thq-icon-small">
+                        <path
+                          d="M426 256l256 256-256 256-60-60 196-196-196-196z"
+                        ></path>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="home-layout3012 thq-section-padding">
+          <div class="home-max-width2 thq-section-max-width">
+            <div class="home-row2 thq-grid-auto-300">
+              <div class="home-feature12">
+                <img
+                  alt="image1"
+                  src="public/wii%20remote-600w.png"
+                  class="thq-img-ratio-4-3"
+                />
+                <div class="home-content13 thq-flex-column">
+                  <div class="home-section-title13 thq-flex-column">
+                    <h3 class="home-title12 thq-heading-3">
+                      Controlling a Wii Remote with an Arduino
+                    </h3>
+                    <span class="home-description12 thq-body-small">
+                      I soldered special leads to a Wii remote and controlled
+                      the buttons with an arduino
+                    </span>
+                  </div>
+                  <div class="home-action14 thq-flex-row">
+                    <button class="thq-button-flat">
+                      <a
+                        href="controlling-a-wii-remote-with-an-arduino.html"
+                        class="home-action21 thq-body-small"
+                      >
+                      Learn More
+                      </a>
+                      <svg viewBox="0 0 1024 1024" class="thq-icon-small">
+                        <path
+                          d="M426 256l256 256-256 256-60-60 196-196-196-196z"
+                        ></path>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="home-feature22">
+                <img
+                  alt="image2"
+                  src="public/1v1cap-600w.png"
+                  class="thq-img-ratio-4-3"
+                />
+                <div class="home-content14 thq-flex-column">
+                  <div class="home-section-title14 thq-flex-column">
+                    <strong class="home-title22 thq-heading-3">
+                      Computer Plays Capture the Flag with Evolution
+                    </strong>
+                    <span class="home-description22 thq-body-small">
+                      Harnessing the power of evolution, I programmed a
+                      simulation of hundreds of agents all slowly learning how
+                      to play capture the flag.
+                    </span>
+                  </div>
+                  <div class="home-action16 thq-flex-row">
+                    <button class="thq-button-flat">
+                      <a
+                       href="computer-plays-capture-the-flag.html"
+                        class="home-action21 thq-body-small"
+                      >
+                      Learn More
+                      </a>
+                      <svg viewBox="0 0 1024 1024" class="thq-icon-small">
+                        <path
+                          d="M426 256l256 256-256 256-60-60 196-196-196-196z"
+                        ></path>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="home-feature32">
+                <img
+                  alt="PlaceholderImage1314"
+                  src="public/button.png"
+                  class="thq-img-ratio-4-3"
+                />
+                <div class="home-content15 thq-flex-column">
+                  <div class="home-section-title15 thq-flex-column">
+                    <strong class="home-title32 thq-heading-3">
+                      Concertina Button FEA
+                    </strong>
+                    <span class="home-description32 thq-body-small">
+                      Using my knowledge in 3D printers, I modeled and 3D printed a button part that 
+                      would replace a tedious operation in making an instrument called a Concertina.
+                    </span>
+                  </div>
+                  <div class="home-action17 thq-flex-row">
+                    <button class="thq-button-flat">
+                      <a
+                       href="concertina-button.html"
+                        class="home-action21 thq-body-small"
+                      >
+                      Learn More
+                      </a>
+                      <svg viewBox="0 0 1024 1024" class="thq-icon-small">
+                        <path
+                          d="M426 256l256 256-256 256-60-60 196-196-196-196z"
+                        ></path>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="home-layout3013 thq-section-padding">
+          <div class="home-max-width3 thq-section-max-width">
+            <div class="home-row3 thq-grid-auto-300">
+              <div class="home-feature13">
+                <img
+                  alt="image1"
+                  src="public/chat_00476-600w.png"
+                  class="thq-img-ratio-4-3"
+                />
+                <div class="home-content16 thq-flex-column">
+                  <div class="home-section-title16 thq-flex-column">
+                    <h3 class="home-title13 thq-heading-3">
+                      <span>
+                        Calculating Pi by How Many Times xQc Says "Chat" using
+                        AI
+                      </span>
+                      <br />
+                    </h3>
+                    <span class="home-description13 thq-body-small">
+                      Using statistics and Machine Learning, I was able to teach
+                      an AI when the streamer xQc says the word "Chat." I used
+                      this information to calculate Pi
+                    </span>
+                  </div>
+                  <div class="home-action18 thq-flex-row">
+                    <button class="thq-button-flat">
+                      <a
+                      href="xqc.html"
+                       class="home-action21 thq-body-small"
+                      >
+                      Learn More
+                      </a>
+                      <svg viewBox="0 0 1024 1024" class="thq-icon-small">
+                        <path
+                          d="M426 256l256 256-256 256-60-60 196-196-196-196z"
+                        ></path>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="home-feature23">
+                <img
+                  alt="image2"
+                  src="public/magnesium.jpg"
+                  class="thq-img-ratio-4-3"
+                />
+                <div class="home-content17 thq-flex-column">
+                  <div class="home-section-title17 thq-flex-column">
+                    <strong class="home-title23 thq-heading-3">
+                      Extracting Magnesium Oxide from Magnesium Pills
+                    </strong>
+                    <span class="home-description23 thq-body-small">
+                      Using HCl and NaOH, I came up with a procedure to remove
+                      the Magnesium Oxide from Magnesium supplements
+                    </span>
+                  </div>
+                  <div class="home-action20 thq-flex-row">
+                    <button class="thq-button-flat">
+                      <a
+                      href="magnesium-oxide.html"
+                       class="home-action21 thq-body-small"
+                     >
+                     Learn More
+                     </a>
+                     
+                      <svg viewBox="0 0 1024 1024" class="thq-icon-small">
+                        <path
+                          d="M426 256l256 256-256 256-60-60 196-196-196-196z"
+                        ></path>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="home-feature33">
+                <img
+                  alt="PlaceholderImage1314"
+                  src="public/wordassociations-600w.png"
+                  class="thq-img-ratio-4-3"
+                />
+                <div class="home-content18 thq-flex-column">
+                  <div class="home-section-title18 thq-flex-column">
+                    <strong class="home-title33 thq-heading-3">
+                      Word Associations Using AI
+                    </strong>
+                    <span class="home-description33 thq-body-small">
+                      Similar to Google's Word2Vec algorithm, I programmed a
+                      machine to learn to associate words with each other
+                    </span>
+                  </div>
+                  <div class="home-action24 thq-flex-row">
+                    <button class="thq-button-flat">
+                      <a
+                       href="word-associations.html"
+                        class="home-action21 thq-body-small"
+                      >
+                      Learn More
+                      </a>
+                      <svg viewBox="0 0 1024 1024" class="thq-icon-small">
+                        <path
+                          d="M426 256l256 256-256 256-60-60 196-196-196-196z"
+                        ></path>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="home-layout3014 thq-section-padding">
+          <div class="home-max-width4 thq-section-max-width">
+            <div class="home-row4 thq-grid-auto-300">
+              <div class="home-feature14">
+                <img
+                  alt="image1"
+                  src="public/audio-600w.png"
+                  class="thq-img-ratio-4-3"
+                />
+                <div class="home-content19 thq-flex-column">
+                  <div class="home-section-title19 thq-flex-column">
+                    <h3 class="home-title14 thq-heading-3">
+                      Audio Experiments and Midi Files
+                    </h3>
+                    <span class="home-description14 thq-body-small">
+                      A couple of experiments that I did with audio and Midi
+                      files.
+                    </span>
+                  </div>
+                  <div class="home-action25 thq-flex-row">
+                    <button class="thq-button-flat">
+                      <a
+                       href="audio-experiments.html"
+                        class="home-action21 thq-body-small"
+                      >
+                      Learn More
+                    </a>
+                 
+                      <svg viewBox="0 0 1024 1024" class="thq-icon-small">
+                        <path
+                          d="M426 256l256 256-256 256-60-60 196-196-196-196z"
+                        ></path>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="home-feature24">
+                <img
+                  alt="image2"
+                  src="public/plane%20(4)-600w.png"
+                  class="thq-img-ratio-4-3"
+                />
+                <div class="home-content20 thq-flex-column">
+                  <div class="home-section-title20 thq-flex-column">
+                    <strong class="home-title24 thq-heading-3">
+                      Pilot's License
+                    </strong>
+                    <span class="home-description24 thq-body-small">
+                      I earned my private pilot's liscense!
+                    </span>
+                  </div>
+                  <div class="home-action26 thq-flex-row">
+                    <button class="thq-button-flat">
+                      <a
+                      href="pilots-liscense.html"
+                       class="home-action21 thq-body-small"
+                     >
+                     Learn More
+                   </a>
+                      <svg viewBox="0 0 1024 1024" class="thq-icon-small">
+                        <path
+                          d="M426 256l256 256-256 256-60-60 196-196-196-196z"
+                        ></path>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="home-feature34">
+                <img
+                  alt="PlaceholderImage1314"
+                  src="public/gas-600w.png"
+                  class="thq-img-ratio-4-3"
+                />
+                <div class="home-content21 thq-flex-column">
+                  <div class="home-section-title21 thq-flex-column">
+                    <strong class="home-title34 thq-heading-3">
+                      Gas Simulation
+                    </strong>
+                    <span class="home-description34 thq-body-small">
+                      A particle simulation of gas particles in a chamber.
+                    </span>
+                  </div>
+                  <div class="home-action28 thq-flex-row">
+                    <button class="thq-button-flat">
+                      <a
+                      href="gas-simulator.html"
+                       class="home-action21 thq-body-small"
+                     >
+                     Learn More
+                   </a>
+                      <svg viewBox="0 0 1024 1024" class="thq-icon-small">
+                        <path
+                          d="M426 256l256 256-256 256-60-60 196-196-196-196z"
+                        ></path>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

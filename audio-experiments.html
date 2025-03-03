@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+      Audio Experiments
+    </title>
+    <meta
+      property="og:title"
+      content="Creating-My-Face-With-Machine-Learning - Simplistic Limp Gerbil"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;  -webkit-font-smoothing: antialiased;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;  color: inherit;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}details {  display: block;  margin: 0;  padding: 0;}summary::-webkit-details-marker {  display: none;}[data-thq="accordion"] [data-thq="accordion-content"] {  max-height: 0;  overflow: hidden;  transition: max-height 0.3s ease-in-out;  padding: 0;}[data-thq="accordion"] details[data-thq="accordion-trigger"][open] + [data-thq="accordion-content"] {  max-height: 1000vh;}details[data-thq="accordion-trigger"][open] summary [data-thq="accordion-icon"] {  transform: rotate(180deg);}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-theme-neutral-dark);
+        background: var(--dl-color-theme-neutral-light);
+
+        fill: var(--dl-color-theme-neutral-dark);
+      }
+    </style>
+    <script type="text/javascript">
+	
+	
+
+      var line = [];
+      var line2 = [];
+        
+      var Wave = [];
+      var Wave2 = [];
+        
+      var canvas;
+      var ctx;
+        
+      
+      var L2OXOffset = -200;
+      var L2OYOffset = 200;
+        
+      var L1OXOffset = -200;
+      var L1OYOffset = 0;
+        
+      var freq1 = 0.1;
+      var freq2 = 0.1;
+      var trig1 = "Sin";
+      var trig2 = "Sin";
+      
+      var firstStart = true;
+      
+        
+      var starter;
+      
+      var notStarted = true;
+      
+      function startGame() {
+        
+        track = 0;
+        
+        Wave = [];
+        Wave2 = [];
+        
+        line = [];
+        line2 = [];
+        
+        waveImageX = [];
+        waveImageY = [];
+          
+        
+        freq1 = parseFloat(document.getElementById("freq1").value);
+        freq2 = parseFloat(document.getElementById("freq2").value);
+        
+        trig1 = document.getElementById("trig1").value;
+        trig2 = document.getElementById("trig2").value;
+        var on = -1;
+        
+        let t = -1;
+        var ex = 0;
+        var n = 0;
+        for (u = 0; u < 99; u++) {
+          
+          /*if (u % 3 == 0) {
+            on++;
+          }
+          if (on % 2 == 0) {
+            Wave.push(100);
+          }
+          else {
+            Wave.push(-100);
+          }
+          */
+          
+          /*if (u % 25 == 0) {
+            on++;
+          }
+            if (on == 0) {
+            Wave.push((10 - u) * 10);
+            ex = 10 - u;
+          }
+          else if (on == 1) {
+            Wave.push((ex * 10));
+            
+          }
+          else if (on == 2) {
+            t++;
+            Wave.push((t + ex) * 10);
+            n = t + ex;
+          }
+          else {
+            Wave.push(n * 10);
+          } 
+          */
+          
+          var val = Math.sin(u * freq1) * 100;
+          
+          if (trig1 === "Cos") {
+            
+            val = Math.cos(u * freq1) * 100;
+          
+          }
+          if (trig1 === "Tan") {
+            
+            val = Math.tan(u * freq1) * 100;
+          
+          }
+          
+          
+          
+          Wave.push(val);
+          
+          
+          
+          
+        }
+        
+        
+        console.log(Wave);
+        
+        on = -1;
+        
+        t = -1;
+          ex = 0;
+        n = 0;
+        var b = 0;
+        for (u = 0; u < 100; u++) {
+          
+          /*if (u % 3 == 0) {
+            on++;
+          }
+          if (on % 2 == 0) {
+            Wave.push(100);
+          }
+          else {
+            Wave.push(-100);
+          }
+          */
+          
+          /*if (u % 25 == 0) {
+            on++;
+          }
+            if (on == 0) {
+            Wave2.push(ex * 1);
+            ;
+          }
+          else if (on == 1) {
+            t++;
+            Wave2.push((ex + t) * 1);
+            n = ex + t;
+            
+          }
+          else if (on == 2) {
+            Wave2.push(n * 1);
+            
+            
+          }
+          else {
+            b++;
+            Wave2.push((n - b) * 1);
+            
+          } */
+          
+          var val = Math.sin(u * freq2) * 100;
+          
+          if (trig2 === "Cos") {
+            
+            val = Math.cos(u * freq2) * 100;
+          
+          }
+          if (trig2 === "Tan") {
+            
+            val = Math.tan(u * freq2) * 100;
+          
+          }
+          
+          
+          
+          Wave2.push(val);
+          
+          
+          
+          
+          
+          
+          
+        }
+        
+        console.log(Wave2);
+        
+        
+        var freq = 0;
+        
+        var coolio = dft(Wave);
+        
+        let XCOOL = 0;
+        let YCOOL = 0;
+        let PXCOOL = 0;
+        let PYCOOL = 0;
+        for (i = 0; i < coolio.length; i++) {
+          
+          var cool = false;
+          
+          if (i == 0) {
+            cool = true;
+          }
+          
+          
+          freq++;
+          
+          PXCOOL = XCOOL;
+          PYCOOL = YCOOL;
+          
+          var multiplier = 1;
+          
+          XCOOL += coolio[i].Amp * Math.cos(coolio[i].Phase);
+          YCOOL += coolio[i].Amp * Math.sin(coolio[i].Phase);
+        
+          if (i % 2 == 0) {
+            multiplier = 1;
+          }
+          else {
+            multiplier = -1;
+          }
+          
+          
+          line.push(new Line(PXCOOL + L1OXOffset, PYCOOL + L1OYOffset, XCOOL + L1OXOffset, YCOOL + L1OYOffset, multiplier * coolio[i].freq, coolio[i].Amp, cool));	
+          
+          
+        }
+        
+        
+          freq = 0;
+        
+        coolio = dft(Wave2);
+        
+        XCOOL = 0;
+        YCOOL = 0;
+        PXCOOL = 0;
+        PYCOOL = 0;
+        for (i = 0; i < coolio.length; i++) {
+          
+          var cool = false;
+          
+          
+          
+          
+          freq++;
+          
+          PXCOOL = XCOOL;
+          PYCOOL = YCOOL;
+          
+          var multiplier = 1;
+          
+          XCOOL += coolio[i].Amp * Math.cos(coolio[i].Phase);
+          YCOOL += coolio[i].Amp * Math.sin(coolio[i].Phase);
+        
+          if (i % 2 == 0) {
+            multiplier = 1;
+          }
+          else {
+            multiplier = -1;
+          }
+          
+          
+          line2.push(new Line(PXCOOL + L2OXOffset, PYCOOL + L1OYOffset, XCOOL + L1OXOffset, YCOOL + L1OYOffset, multiplier * coolio[i].freq, coolio[i].Amp, cool));	
+          
+          
+        }
+        
+        
+        console.log(line);
+        console.log(line2);
+        
+        if (firstStart)
+         {
+           
+           canvas = document.getElementById("main");
+          ctx = canvas.getContext("2d");
+           
+           
+           
+           
+         }
+        
+        clear();
+        
+        
+        if (notStarted) {
+          
+          notStarted = false;
+          starter = setInterval(speed, 10);
+          
+        }
+        
+          
+      }
+        
+      function speed() {
+        
+        
+        for (let i = 0; i < 2; i++) {
+          
+          
+          updateGameArea();
+          
+        }
+        
+        
+      }
+      
+      
+      function dft(array) {
+        
+        let final = [];
+        
+        const N = array.length;
+        
+        for (k = 0; k < N; k++) {
+          let Real = 0;
+          let Imaginary = 0;
+          for (n = 0; n < N; n++) {
+            let phi = (((Math.PI * 2) * k * n) / N);
+            Real += array[n] * Math.cos(phi);
+            Imaginary -= array[n] * Math.sin(phi);
+            
+          }
+          
+          let RealFinal = Real / N;
+          let ImaginaryFinal = Imaginary / N;
+          
+          
+          var freq = k;
+          var Amp = Math.sqrt(RealFinal * RealFinal + ImaginaryFinal * ImaginaryFinal);
+          var Phase = Math.atan2(ImaginaryFinal, RealFinal);
+          
+          
+          
+          final[k] = { RealFinal, ImaginaryFinal, freq, Amp, Phase};
+          
+          
+          
+        }
+        
+        
+        
+        return final;
+      }	
+        
+      
+      
+      
+      
+      
+      var isComplete = false;
+        
+      function Line(x1, y1, x2, y2, frequency, amplitude, isFirst) {
+          this.X1 = x1;
+          this.Y1 = y1;
+          this.X2 = x2;
+          this.Y2 = y2;
+        
+        
+        this.frequency = frequency;
+        this.amplitute = amplitude;
+        
+        var tx = 300;
+        var ty = 250;
+        var vx = 0.01;
+        var vy = 0.01;
+        
+        
+        
+        
+        
+          
+          this.update = function(){
+          
+          
+      
+          
+          if (isFirst == true && firstStart) {
+      
+            ctx.translate(tx, ty);
+            firstStart = false;
+          }
+              
+          tx = 0;
+          ty = 0;
+          
+      
+          
+              ctx.beginPath();
+          ctx.moveTo(this.X1, this.Y1);
+          ctx.lineTo(this.X2, this.Y2);
+          
+          
+          ctx.stroke();
+          
+          
+            
+          
+          
+          
+          
+          
+          }
+      }
+      
+      function WeelCalculations(frequency, amplitude, x, y) {
+        
+        
+        var first = frequency * Math.PI * track;
+        var Real = Math.cos(first);
+        var Imaginary = Math.sin(first);
+        
+        var actualAmp = amplitude * 1;
+        return [(Real * actualAmp) + x, (Imaginary * actualAmp) + y];
+        
+        
+        
+      }
+        
+      
+        
+        
+      
+      var track = 0;
+      var waveImageX = [0];
+      var waveImageY = [0];
+        
+        
+      function clear() {
+        
+        
+        ctx.clearRect(-1000, -1000, 2000, 2000);
+        
+      }
+      
+      function updateGameArea() {
+          clear();
+        
+        
+        
+        track += (1 / (Math.abs(line2[line2.length - 1].frequency) * 1)) * .1;
+        
+        if (track > 2) {
+          track = 0;
+          clearInterval(starter);
+          notStarted = true;
+          
+        }
+        
+        //e^pi*i*x;
+        
+        
+        
+        var lx = 0;
+        var ly = 0;
+        for (i = 0; i < line.length - 1; i++) {
+          var cool = WeelCalculations(line[i].frequency, line[i].amplitute, lx, ly);
+          
+          
+          line[i].X1 = lx + L1OXOffset;
+          line[i].Y1 = ly + L1OYOffset;
+          
+          line[i].X2 = cool[0] + L1OXOffset;
+          line[i].Y2 = cool[1] + L1OYOffset;
+          
+          line[i].update();
+          
+          
+          
+          lx = cool[0];
+          ly = cool[1];
+          
+          
+          
+          
+          
+          
+          
+        }
+        
+        
+        
+        
+        ctx.beginPath();
+        ctx.moveTo(lx + L1OXOffset, ly + L1OYOffset);
+        ctx.lineTo(650, ly + L1OYOffset);
+        ctx.stroke();
+        
+        waveImageY.push(ly + L1OYOffset);
+        
+        
+        
+        lx = 0;
+        ly = 0;
+        for (i = 0; i < line2.length - 1; i++) {
+          var cool = WeelCalculations(line2[i].frequency, line2[i].amplitute, lx, ly);
+          
+          
+          line2[i].Y1 = lx + L2OXOffset;
+          line2[i].X1 = ly + L2OYOffset;
+          
+          line2[i].Y2 = cool[0] + L2OXOffset;
+          line2[i].X2 = cool[1] + L2OYOffset;
+          
+          line2[i].update();
+          
+          
+          
+          lx = cool[0];
+          ly = cool[1];
+          
+          
+          
+          
+          
+          
+          
+        }
+        
+        
+        
+        
+        
+        ctx.beginPath();
+        ctx.moveTo(ly + L2OYOffset, lx + L2OXOffset);
+        ctx.lineTo(ly + L2OYOffset, 200);
+        ctx.stroke();
+        
+        
+        
+        waveImageX.push(ly + L2OYOffset);
+        
+        
+        if (waveImageX.length > 10000) {
+          waveImageX.shift();
+          waveImageY.shift();
+          
+        }
+        
+        
+        for (i = 1; i < waveImageX.length; i++) {
+          ctx.beginPath();
+          ctx.moveTo(waveImageX[i - 1], waveImageY[i - 1]);
+          ctx.lineTo(waveImageX[i], waveImageY[i]);
+          ctx.stroke();
+        }
+      
+        
+        
+        
+      
+          
+        
+        
+      }
+        
+        
+        </script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/animate.css@4.1.1/animate.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
+    />
+  </head>
+  <body>
+    <link rel="stylesheet" href="./style.css" />
+    <div>
+      <link
+        href="./word-associations.css"
+        rel="stylesheet"
+      />
+
+      <div class="creating-my-face-with-machine-learning-container1">
+        <blog-post-header31-wrapper class="blog-post-header31-wrapper">
+          <!--BlogPostHeader31 component-->
+          <div class="blog-post-header31-content1 thq-section-padding">
+            <div class="blog-post-header31-max-width thq-section-max-width">
+              <div class="blog-post-header31-header">
+                <div class="blog-post-header31-content2">
+                  <div class="blog-post-header31-breadcrumbs1">
+                    <svg
+                      viewBox="0 0 1024 1024"
+                      class="blog-post-header31-icon1"
+                    >
+                      <path
+                        d="M658 708l-60 60-256-256 256-256 60 60-196 196z"
+                      ></path>
+                    </svg>
+                    <a
+                      href="index.html"
+                      class="blog-post-header31-text1 thq-body-small"
+                    >
+                      <span>Home</span>
+                      <br />
+                    </a>
+                  </div>
+                  <div class="blog-post-header31-breadcrumbs2"></div>
+                  <h1 class="blog-post-header31-text4 thq-heading-1">
+                    <fragment
+                      class="creating-my-face-with-machine-learning-fragment1"
+                    >
+                      <span
+                        class="creating-my-face-with-machine-learning-text1"
+                      >
+                        Audio And Midi Experiments
+                      </span>
+                    </fragment>
+                  </h1>
+                </div>
+              </div>
+              <div class="blog-post-header31-content3">
+                <div class="blog-post-header31-avatar">
+                  <div class="blog-post-header31-content4">
+                    <span class="blog-post-header31-text5 thq-body-small">
+                      <fragment
+                        class="creating-my-face-with-machine-learning-fragment2"
+                      >
+                        <span
+                          class="creating-my-face-with-machine-learning-text2"
+                        >
+                        Unknown Date
+                        </span>
+                      </fragment>
+                    </span>
+                    <div class="blog-post-header31-time"></div>
+                  </div>
+                </div>
+                <div class="blog-post-header31-share-buttons"></div>
+              </div>
+            </div>
+          </div>
+        </blog-post-header31-wrapper>
+        <div
+          class="creating-my-face-with-machine-learning-container2 thq-section-padding"
+        >
+          <div
+            class="creating-my-face-with-machine-learning-max-width thq-section-max-width"
+          >
+            <div
+              class="creating-my-face-with-machine-learning-content thq-flex-column"
+            >
+              <ul
+                class="creating-my-face-with-machine-learning-ul thq-flex-column"
+              >
+                <li class="list-item thq-flex-column">
+                  <h2
+                    class="creating-my-face-with-machine-learning-heading1 thq-heading-2"
+                  >
+                    Basic Explaination
+                  </h2>
+                </li>
+                <li class="list-item">
+                  <p class="thq-body-small">
+                    <span>
+                      This post is a collection of experiments I have done with audio analysis.&nbsp;
+                    </span>
+                  </p>
+                </li>
+                <li>
+                  <strong>
+                    Midi Files
+                  </strong>
+                  <p class="thq-body-small">
+                    <span>
+                      Midi files are unique to other file types. Midi files store what notes are played as 
+                      well as how long they are played. Midi files, unlike other files, have the unique ability 
+                      to be converted into images that depict what notes are being played at a given time. 
+                      This allows for the possibility to train a Machine Learning model on these images to 
+                      make music. This however is incredibly difficult and is currently a problem I’m experimenting with right now!
+
+                      So far, I have created an algorithm to read these files and convert them into image files that could 
+                      be read by a computer. Below are some Midi Files converted into images by some software I wrote:&nbsp;
+                    </span>
+                  </p>
+                </li>
+                <li class="list-item">
+                  <div>
+                    <img
+                      src="public\F00001.png"
+                      alt="image"
+                      class="creating-my-face-with-machine-learning-image"
+                    />
+                    <img
+                      src="public\F00002.png"
+                      alt="image"
+                      class="creating-my-face-with-machine-learning-image"
+                    />
+                  </div>
+                </li>
+                <li class="list-item">
+                  <strong>
+                    Audio Imaging
+                  </strong>
+                  <p class="thq-body-small">
+                    One of my all time favorite math equations is an equation called the Fourier Transform. The Fourier 
+                    Transform takes in any sound wave and breaks it apart into individual frequencies. This is very useful 
+                    for audio processing which uses this formula in autotune software for example. For me however, I took 
+                    a different route and experimented with creating images from these frequencies. While writing the 
+                    software for it, I came across an experiment that yielded super interesting results by substituting in 
+                    trig functions to create our “sound wave” for analysis. This software can draw interesting shapes from these 
+                    functions. Below is this software implemented right into the website. By changing the variables below, you can draw different shapes.
+                  </p>
+                </li>
+                <li class="list-item">
+                  <strong>Web Version:</strong>
+                </li>
+                <li class="list-item">
+                  <strong>Web Version:</strong>
+                </li>
+                <li class="list-item">
+                  Typically numbers between 0 and 0.5 produce the best results.
+                </li>
+                <li class="list-item">
+                  <strong>My Favorites</strong>
+                </li>
+                <li class="list-item">
+                  <p class="thq-body-small">
+                    1. Frequency 1: 0.1,     Frequency 2: 0.3,     Trig 1: Sin,     Trig 2: Sin
+                  </p>
+                  
+                </li>
+                <li class="list-item">
+                  <p class="thq-body-small">
+                    2. Frequency 1: 0.2,     Frequency 2: 0.1,      Trig 1: Sin,     Trig 2: Cos
+                  </p>
+                  
+                </li>
+                <li class="list-item">
+                  <p class="thq-body-small">
+                    3. Frequency 1: 0.1,     Frequency 2: 0.1,      Trig 1: Tan,     Trig 2: Tan
+                  </p>
+                  
+                </li>
+
+                <li class="list-item">
+                  <p class="thq-body-small">
+                    4. Frequency 1: 0.1,     Frequency 2: 0.05,      Trig 1: Sin,      Trig 2: Sin
+                  </p>
+                  
+                </li>
+
+                <li>
+                  <div>
+                    <p class="thq-body-small">
+                      Frequency 1:
+                    </p>
+                    <input style="border: solid 1px black;" id="freq1">
+                    <select id="trig1">
+								  
+                      <option style="border: solid 1px black;" value="Sin">Sin</option>
+                      <option style="border: solid 1px black;" value="Cos">Cos</option>
+                      <option style="border: solid 1px black;" value="Tan">Tan</option>
+                      
+                      </select>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <p class="thq-body-small">
+                      Frequency 2:
+                    </p>
+                    <input style="border: solid 1px black;" id="freq2">
+                    <select id="trig2">
+								  
+                      <option style="border: solid 1px black;" value="Sin">Sin</option>
+                      <option style="border: solid 1px black;" value="Cos">Cos</option>
+                      <option style="border: solid 1px black;" value="Tan">Tan</option>
+                      
+                      </select>
+                  </div>
+                </li>
+                <li>
+                  <button style="padding: 10px; background-color: #7FCD58; font-size: 18px;" onclick="startGame()">Run!</button>
+                </li>
+                <li>
+                  <canvas style="border: solid 4px black" id="main" width="1000" ,="" height="500"></canvas>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
